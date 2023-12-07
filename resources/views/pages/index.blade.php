@@ -1,4 +1,4 @@
-@extends('sections.twocolumns.twocolumns')
+@extends('layouts.twocolumns')
 
 @section('title', 'Index')
 
