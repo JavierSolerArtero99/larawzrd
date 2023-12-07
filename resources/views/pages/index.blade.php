@@ -1,7 +1,11 @@
-@extends('layouts.default')
+@extends('sections.twocolumns.twocolumns')
 
 @section('title', 'Index')
 
-@section('content')
-    <p>This is my body content.</p>
+@section('left')
+<p>left</p>
+@endsection
+
+@section('right')
+<p>right</p>
 @endsection
