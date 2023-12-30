@@ -12,6 +12,8 @@
     @livewireStyles
 
     @vite('resources/css/app.css')
+    @vite('resources/css/atoms.css')
+    @vite('resources/css/global.css')
 </head>
 
 <body>
