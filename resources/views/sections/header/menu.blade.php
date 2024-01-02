@@ -92,9 +92,6 @@
             @foreach ($menuItems as $itemKey => $item)
                 open{{ $itemKey }}: false,
             @endforeach
-            handleOpen(element) {
-                console.log(element);
-            },
         }
     }
 </script>
