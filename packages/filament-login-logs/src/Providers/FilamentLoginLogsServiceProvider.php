@@ -1,10 +1,11 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Poviders;
+namespace Wzrd\FilamentLoginLogs\Providers;
 
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\FilamentLoginLogs\Providers\LoginLoggerEventServiceProvider;
 
 class FilamentLoginLogsServiceProvider extends PackageServiceProvider
 {
