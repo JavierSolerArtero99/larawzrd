@@ -2,8 +2,8 @@
 
 namespace Wzrd\FilamentLoginLogs\Loggers;
 
-use Wzrd\FilamentLoginLogs\Models\LoginLog;
 use Illuminate\Auth\Events\Login;
+use Wzrd\FilamentLoginLogs\Models\LoginLog;
 
 class LoginLogger
 {

@@ -2,8 +2,8 @@
 
 namespace Wzrd\FilamentLoginLogs\Resources\LoginLogResource\Pages;
 
-use Wzrd\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 use Filament\Resources\Pages\ListRecords;
+use Wzrd\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 
 class ListLoginLog extends ListRecords
 {
