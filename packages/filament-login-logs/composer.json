@@ -1,0 +1,31 @@
+{
+    "name": "cursosdesarrolloweb/filament-login-logs-plugin",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cursosdesarrolloweb\\FilamentLoginLogs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cursosdesarrolloweb",
+            "email": "app@cursosdesarrolloweb.es"
+        }
+    ],
+    "require": {
+        "filament/filament": "^3.0",
+        "log1x/blade-filetype-icons": "^1.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cursosdesarrolloweb\\FilamentLoginLogs\\FilamentLoginLogsServiceProvider"
+            ]
+        }
+    }
+}
