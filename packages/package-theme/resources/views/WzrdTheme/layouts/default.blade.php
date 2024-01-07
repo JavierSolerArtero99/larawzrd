@@ -18,11 +18,11 @@
 
 <body>
 
-    @include('sections.header.header')
+    @include('WzrdTheme::WzrdTheme.sections.header.header')
 
     @yield('content')
 
-    @include('sections.footer.footer')
+    @include('WzrdTheme::WzrdTheme.sections.footer.footer')
 
     @livewireScripts
     

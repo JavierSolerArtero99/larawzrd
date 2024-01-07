@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('WzrdTheme::WzrdTheme.layouts.default')
 
 @section('content')
 <main class="flex"> 

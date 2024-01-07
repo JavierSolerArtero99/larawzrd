@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0adabcff8b6599b4a1a9f5bfcaa9aea3",
+    "content-hash": "a227e2c7a01f1b8f093f4be19ad25167",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -7680,6 +7680,47 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wzrd/package-theme",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-theme",
+                "reference": "92ab5590377347ae7022e7ab19a44020c067553e"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Theme\\WzrdThemeProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Theme\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -10117,7 +10158,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "cursosdesarrolloweb/filament-login-logs-plugin": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

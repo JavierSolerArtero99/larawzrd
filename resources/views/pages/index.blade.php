@@ -1,4 +1,4 @@
-@extends('layouts.twocolumns')
+@extends('WzrdTheme::WzrdTheme.layouts.twocolumns')
 
 @section('title', 'Index')
 
