@@ -1,15 +1,15 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Loggers;
+namespace Cursosdesarrolloweb\FilamentLoginLogs\Loggers;
 
+use Cursosdesarrolloweb\FilamentLoginLogs\Models\LoginLog;
 use Illuminate\Auth\Events\Login;
-use Wzrd\FilamentLoginLogs\Models\LoginLog;
 
 class LoginLogger
 {
     public function handle(Login $event): void
     {
-        $primaryKey = app(config('filament-login-logs.user_table'))->getKeyName();
+        $primaryKey = app(config('filament-login-logs.model'))->getKeyName();
         LoginLog::create([
             'user_id' => $event->user->{$primaryKey},
             'ip' => request()->ip(),

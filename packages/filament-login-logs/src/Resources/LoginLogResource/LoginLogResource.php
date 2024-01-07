@@ -1,12 +1,12 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Resources\LoginLogResource;
+namespace Cursosdesarrolloweb\FilamentLoginLogs\Resources\LoginLogResource;
 
+use Cursosdesarrolloweb\FilamentLoginLogs\Models\LoginLog;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Wzrd\FilamentLoginLogs\Models\LoginLog;
 
 class LoginLogResource extends Resource
 {

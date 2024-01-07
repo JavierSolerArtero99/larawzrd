@@ -1,10 +1,10 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs;
+namespace Cursosdesarrolloweb\FilamentLoginLogs;
 
+use Cursosdesarrolloweb\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Wzrd\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 
 class FilamentLoginLogs implements Plugin
 {

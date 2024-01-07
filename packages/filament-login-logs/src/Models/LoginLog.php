@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Models;
+namespace Cursosdesarrolloweb\FilamentLoginLogs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -28,6 +28,6 @@ class LoginLog extends Model
 
     public function loggedBy(): BelongsTo
     {
-        return $this->belongsTo(config('filament-login-logs.user_table'), config('filament-login-logs.user_pk'));
+        return $this->belongsTo(config('filament-login-logs.model'), 'user_id');
     }
 }

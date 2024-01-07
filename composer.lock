@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fca34a8decca73c08374bf791d8b554",
+    "content-hash": "0adabcff8b6599b4a1a9f5bfcaa9aea3",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -279,6 +279,48 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "cursosdesarrolloweb/filament-login-logs-plugin",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/filament-login-logs",
+                "reference": "2fdc8b80fd661039a04c406c7c17a0b213a75cbf"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "log1x/blade-filetype-icons": "^1.0",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Cursosdesarrolloweb\\FilamentLoginLogs\\FilamentLoginLogsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cursosdesarrolloweb\\FilamentLoginLogs\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "cursosdesarrolloweb",
+                    "email": "app@cursosdesarrolloweb.es"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "danharrin/date-format-converter",
@@ -7638,46 +7680,6 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
-        },
-        {
-            "name": "wzrd/filament-login-logs",
-            "version": "dev-WZRD-modular-course",
-            "dist": {
-                "type": "path",
-                "url": "packages/filament-login-logs",
-                "reference": "5bec99ae8d8223bc1f9fa7235e62b9a295d368cc"
-            },
-            "require": {
-                "filament/filament": "^3.1",
-                "log1x/blade-filetype-icons": "^1.0",
-                "spatie/laravel-package-tools": "^1.16"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\FilamentLoginLogs\\Providers\\FilamentLoginLogsServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\FilamentLoginLogs\\": "src/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "description": "Login logs",
-            "transport-options": {
-                "relative": true
-            }
         }
     ],
     "packages-dev": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Providers;
+namespace Cursosdesarrolloweb\FilamentLoginLogs;
 
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -23,7 +23,8 @@ class FilamentLoginLogsServiceProvider extends PackageServiceProvider
                 $command
                     ->publishConfigFile()
                     ->publishMigrations()
-                    ->askToRunMigrations();
+                    ->askToRunMigrations()
+                    ->askToStarRepoOnGitHub('cursosdesarrolloweb/filament-login-logs');
             })
             ->hasConfigFile()
             ->hasMigrations($this->getMigrations())

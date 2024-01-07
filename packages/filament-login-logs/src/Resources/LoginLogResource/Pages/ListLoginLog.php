@@ -1,9 +1,9 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Resources\LoginLogResource\Pages;
+namespace Cursosdesarrolloweb\FilamentLoginLogs\Resources\LoginLogResource\Pages;
 
+use Cursosdesarrolloweb\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 use Filament\Resources\Pages\ListRecords;
-use Wzrd\FilamentLoginLogs\Resources\LoginLogResource\LoginLogResource;
 
 class ListLoginLog extends ListRecords
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\FilamentLoginLogs\Providers;
+namespace Cursosdesarrolloweb\FilamentLoginLogs;
 
 use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

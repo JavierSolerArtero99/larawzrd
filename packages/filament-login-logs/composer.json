@@ -1,20 +1,20 @@
 {
-    "name": "wzrd/filament-login-logs",
-    "description": "Login logs",
+    "name": "cursosdesarrolloweb/filament-login-logs-plugin",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Wzrd\\FilamentLoginLogs\\": "src/"
+            "Cursosdesarrolloweb\\FilamentLoginLogs\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Javier Soler Artero",
-            "email": "javier.soler.jsa@gmail.com"
+            "name": "cursosdesarrolloweb",
+            "email": "app@cursosdesarrolloweb.es"
         }
     ],
     "require": {
-        "filament/filament": "^3.1",
+        "filament/filament": "^3.0",
         "log1x/blade-filetype-icons": "^1.0",
         "spatie/laravel-package-tools": "^1.16"
     },
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wzrd\\FilamentLoginLogs\\Providers\\FilamentLoginLogsServiceProvider"
+                "Cursosdesarrolloweb\\FilamentLoginLogs\\FilamentLoginLogsServiceProvider"
             ]
         }
     }
