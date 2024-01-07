@@ -1,0 +1,24 @@
+{
+    "name": "wzrd/filament-login-logs",
+    "description": "Login logs",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Wzrd\\FilamentLoginLogs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Javier Soler Artero",
+            "email": "javier.soler.jsa@gmail.com"
+        }
+    ],
+    "require": {
+        "filament/filament": "^3.1",
+        "log1x/blade-filetype-icons": "^1.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13"
+    }
+}
