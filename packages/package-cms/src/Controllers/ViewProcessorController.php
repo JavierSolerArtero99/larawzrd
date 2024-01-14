@@ -20,6 +20,8 @@ class ViewProcessorController extends Controller
     {
         $blocks = $this->cmsService->getPageBlocks($slug ?? "home");
 
+        // controlar si existe el block sino 404
+
         return $this->viewBuilder->build($blocks);
     }
 }

@@ -1,7 +1,9 @@
-@extends('WzrdTheme::WzrdTheme.layouts.main')
+@extends('WzrdTheme::WzrdTheme.layouts.' . $layout)
 
-@section('title', 'Index')
+@section('title', $title)
 
-@section('mainContent')
-<p>eeee</p>
-@endsection
+@foreach ($slots as $slot)
+    @section($slot['title'])
+        <p>{{$slot['content']}}</p>
+    @endsection
+@endforeach
