@@ -2,7 +2,9 @@
 
 namespace Wzrd\Cms\Model\Api;
 
+use Wzrd\Cms\Model\Api\BlockInterface;
+
 interface CmsServiceInterface
 {
-    public function getBlocks(string $slug): array;
+    public function getPageBlocks(string $slug): BlockInterface;
 }

@@ -2,14 +2,18 @@
 
 namespace Wzrd\Cms\Model\Implement;
 
+use Wzrd\Cms\Model\Api\BlockInterface;
 use Wzrd\Cms\Model\Api\CmsServiceInterface;
+use Wzrd\Cms\Model\Implement\Block;
 
 class CmsService implements CmsServiceInterface
 {
-    public function getBlocks(string $slug): array
+    public function getPageBlocks(string $slug): BlockInterface
     {
-        return [
-            "home" => ""
+        $blocks = [
+            "home" => new Block(),
         ];
+        
+        return $blocks[$slug] ?? $blocks["home"];
     }
 }

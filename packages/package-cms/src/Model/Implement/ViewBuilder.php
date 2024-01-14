@@ -4,10 +4,11 @@ namespace Wzrd\Cms\Model\Implement;
 
 use Illuminate\View\View;
 use Wzrd\Cms\Model\Api\ViewBuilderInterface;
+use Wzrd\Cms\Model\Api\BlockInterface;
 
 class ViewBuilder implements ViewBuilderInterface
 {
-    public function build(array $blocks): View
+    public function build(BlockInterface $block): View
     {
         return view('WzrdCms::WzrdCms.viewProcessor');
     }
