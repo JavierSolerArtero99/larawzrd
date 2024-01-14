@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a227e2c7a01f1b8f093f4be19ad25167",
+    "content-hash": "6cc6aedc496745aa17ad13111deb0368",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -7678,6 +7678,47 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wzrd/package-cms",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-cms",
+                "reference": "e6aabc39ecf1ae24f039538ddbba38a6054ffc30"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Cms\\WzrdCmsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Cms\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "wzrd/package-theme",

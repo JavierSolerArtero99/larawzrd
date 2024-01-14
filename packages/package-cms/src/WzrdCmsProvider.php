@@ -1,19 +1,19 @@
 <?php
 
-namespace Wzrd\Theme;
+namespace Wzrd\Cms;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class WzrdThemeProvider extends PackageServiceProvider
+class WzrdCmsProvider extends PackageServiceProvider
 {
-    public static string $name = 'wzrd/package-theme';
+    public static string $name = 'wzrd/package-cms';
 
     public function configurePackage(Package $package): void
     {
         $package
             ->name(static::$name)
-            ->hasViews("WzrdTheme");
+            ->hasViews("WzrdCms");
     }
 
     public function registeringPackage(): void
