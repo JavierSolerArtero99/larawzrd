@@ -16,8 +16,10 @@ class ViewProcessorController extends Controller
     ) {
     }
 
-    public function render(): View
+    public function render(string $slug = null): View
     {
-        return view('WzrdCms::WzrdCms.viewProcessor');
+        $blocks = $this->cmsService->getBlocks($slug ?? "home");
+
+        return $this->viewBuilder->build($blocks);
     }
 }

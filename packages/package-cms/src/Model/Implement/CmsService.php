@@ -6,8 +6,10 @@ use Wzrd\Cms\Model\Api\CmsServiceInterface;
 
 class CmsService implements CmsServiceInterface
 {
-    public function getBlocks(): array
+    public function getBlocks(string $slug): array
     {
-        return [];
+        return [
+            "home" => ""
+        ];
     }
 }

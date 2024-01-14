@@ -6,5 +6,5 @@ use Illuminate\View\View;
 
 interface ViewBuilderInterface
 {
-    public function build(): View;
+    public function build(array $blocks): View;
 }
