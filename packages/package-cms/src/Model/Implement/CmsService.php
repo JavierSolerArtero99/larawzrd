@@ -12,21 +12,6 @@ class CmsService implements CmsServiceInterface
         'home' => [
             'slug' => 'home',
             'title' => 'Home',
-            'layout' => 'twocolumns',
-            'slots' => [
-                [
-                    'title' => 'left',
-                    'content' => 'Esta es la izq'
-                ],
-                [
-                    'title' => 'right',
-                    'content' => 'Esta es la drch'
-                ],
-            ],
-        ],
-        'test' => [
-            'slug' => 'compare',
-            'title' => 'Compare',
             'layout' => 'main',
             'slots' => [
                 [
