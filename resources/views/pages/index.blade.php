@@ -1,1 +1,0 @@
-@extends('WzrdCms::WzrdCms.hola')
