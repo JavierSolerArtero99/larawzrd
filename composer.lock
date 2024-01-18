@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cc6aedc496745aa17ad13111deb0368",
+    "content-hash": "c0838c8cf113b5bc2a83cd9f0654f29f",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -7721,6 +7721,47 @@
             }
         },
         {
+            "name": "wzrd/package-customers",
+            "version": "dev-WZRD-package-customers",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-customers",
+                "reference": "01b0912065022657ce4678ff58c4cafa932a1921"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Customer\\CustomerProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Customer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "wzrd/package-theme",
             "version": "dev-main",
             "dist": {
@@ -10199,6 +10240,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cursosdesarrolloweb/filament-login-logs-plugin": 20,
+        "wzrd/package-cms": 20,
         "wzrd/package-theme": 20
     },
     "prefer-stable": true,
