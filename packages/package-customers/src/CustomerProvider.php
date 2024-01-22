@@ -19,6 +19,8 @@ class CustomerProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->askToRunMigrations();
             })
+            ->hasRoute('CustomerRoutes')
+            ->hasViews("WzrdCustomer")
             ->hasMigrations($this->getMigrations());
     }
 

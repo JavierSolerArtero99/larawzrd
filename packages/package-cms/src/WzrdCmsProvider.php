@@ -19,7 +19,7 @@ class WzrdCmsProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
-            ->hasRoute('cmsRouteProcessor')
+            ->hasRoute('CmsRouteProcessor')
             ->hasViews("WzrdCms");
     }
 
