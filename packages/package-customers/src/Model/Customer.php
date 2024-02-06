@@ -4,6 +4,7 @@ namespace Wzrd\Customer\Model;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Wzrd\Customer\Model\CustomerAttributesValues;
 
 class Customer extends Authenticatable
 {
@@ -18,4 +19,9 @@ class Customer extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function attributes()
+    {
+        return $this->hasMany(CustomerAttributesValues::class);
+    }
 }

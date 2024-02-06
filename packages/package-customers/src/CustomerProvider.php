@@ -36,6 +36,7 @@ class CustomerProvider extends PackageServiceProvider
     {
         return [
             'create_customer_table',
+            'create_eav_tables',
         ];
     }
 }
