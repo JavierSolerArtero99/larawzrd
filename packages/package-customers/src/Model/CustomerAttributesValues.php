@@ -8,6 +8,8 @@ use Wzrd\Customer\Model\CustomerAttributes;
 
 class CustomerAttributesValues extends Model
 {
+    protected $table = 'customer_attributes_value';
+
     protected $fillable = [
         'customer_id', 'attribute_id', 'value'
     ];

@@ -4,12 +4,15 @@ namespace Wzrd\Customer\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
+use Wzrd\Customer\Model\Customer;
 
 class LoginController extends Controller
 {
 
     public function render(): View
     {
-        return view('WzrdCustomer::WzrdCustomer.pages.login');
+        $customer = Customer::find(1);
+
+        return view('WzrdCustomer::WzrdCustomer.pages.login', ['customer' => $customer]);
     }
 }

@@ -22,6 +22,6 @@ class Customer extends Authenticatable
 
     public function attributes()
     {
-        return $this->hasMany(CustomerAttributesValues::class);
+        return $this->hasMany(CustomerAttributesValues::class, 'customer_id');
     }
 }
