@@ -22,7 +22,10 @@ return new class extends Migration
             $table->unsignedBigInteger('attribute_id');
             $table->string('value');
             $table->timestamps();
-            $table->index(['customer_id', 'attribute_id']);
+            $table->index(['customer_id', 'attribute_id', 'value']);
+
+            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('attribute_id')->references('id')->on('customer_attributes');
         });
     }
 
