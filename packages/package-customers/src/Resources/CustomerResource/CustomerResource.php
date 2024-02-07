@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Wzrd\Customer\Widgets\CustomersTotalCount;
 
 class CustomerResource extends Resource
 {
@@ -66,6 +67,13 @@ class CustomerResource extends Resource
             'index' => Pages\ListCustomers::route('/'),
             'create' => Pages\CreateCustomer::route('/create'),
             'edit' => Pages\EditCustomer::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            CustomersTotalCount::class
         ];
     }
 }
