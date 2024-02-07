@@ -20,6 +20,11 @@ class Customer extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
+
     public function attributes()
     {
         return $this->hasMany(CustomerAttributesValues::class, 'customer_id');

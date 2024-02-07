@@ -3,15 +3,12 @@
 namespace Wzrd\Customer\Resources\CustomerResource;
 
 use Wzrd\Customer\Resources\CustomerResource\Pages;
-use Wzrd\Customer\Resources\CustomerResource\RelationManagers;
 use Wzrd\Customer\Model\Customer;
-use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Wzrd\Customer\Widgets\CustomersTotalCount;
 
 class CustomerResource extends Resource
@@ -31,7 +28,9 @@ class CustomerResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->required(),
+                TextInput::make('email')->required()->unique(),
+                TextInput::make('password')->required()->password(),
             ]);
     }
 
@@ -39,7 +38,8 @@ class CustomerResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
             ])
             ->filters([
                 //
