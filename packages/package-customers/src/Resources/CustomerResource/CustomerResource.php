@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Customer\Resources;
+namespace Wzrd\Customer\Resources\CustomerResource;
 
 use Wzrd\Customer\Resources\CustomerResource\Pages;
 use Wzrd\Customer\Resources\CustomerResource\RelationManagers;
@@ -17,7 +17,14 @@ class CustomerResource extends Resource
 {
     protected static ?string $model = Customer::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?int $navigationSort = 10;
+
+    protected static ?string $navigationIcon = 'heroicon-o-user';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Customers';
+    }
 
     public static function form(Form $form): Form
     {

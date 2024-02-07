@@ -2,7 +2,7 @@
 
 namespace Wzrd\Customer;
 
-use Wzrd\Customer\Resources\CustomerResource;
+use Wzrd\Customer\Resources\CustomerResource\CustomerResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 

@@ -2,7 +2,7 @@
 
 namespace Wzrd\Customer\Resources\CustomerResource\Pages;
 
-use Wzrd\Customer\Resources\CustomerResource;
+use Wzrd\Customer\Resources\CustomerResource\CustomerResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
