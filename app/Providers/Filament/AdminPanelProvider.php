@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Cursosdesarrolloweb\FilamentLoginLogs\FilamentLoginLogs;
+use Wzrd\Customer\CustomersPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -57,6 +58,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 FilamentLoginLogs::make(),
+                CustomersPlugin::make(),
             ]);
     }
 }
