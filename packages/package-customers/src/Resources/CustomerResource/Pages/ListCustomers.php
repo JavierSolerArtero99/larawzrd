@@ -21,7 +21,12 @@ class ListCustomers extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            Actions\CreateAction::make()->color('success'),
+            Actions\Action::make('create-attribute')
+                ->label(__("New Attribute"))
+                ->color("info")
+                ->url("/")
+                ->openUrlInNewTab()
         ];
     }
 }
