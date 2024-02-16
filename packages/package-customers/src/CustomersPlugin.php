@@ -5,6 +5,7 @@ namespace Wzrd\Customer;
 use Wzrd\Customer\Resources\CustomerResource\CustomerResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Wzrd\Customer\Resources\CustomerAttributesResource\CustomerAttributesResource;
 
 class CustomersPlugin implements Plugin
 {
@@ -23,6 +24,7 @@ class CustomersPlugin implements Plugin
         $panel
             ->resources([
                 CustomerResource::class,
+                CustomerAttributesResource::class,
             ]);
     }
 
