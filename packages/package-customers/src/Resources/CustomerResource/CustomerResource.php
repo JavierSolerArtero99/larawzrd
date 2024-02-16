@@ -9,6 +9,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Wzrd\Customer\Model\CustomerAttributes;
+use Wzrd\Customer\Tables\Columns\DynamicAttribute;
 use Wzrd\Customer\Widgets\CustomersTotalCount;
 
 class CustomerResource extends Resource
@@ -36,11 +38,20 @@ class CustomerResource extends Resource
 
     public static function table(Table $table): Table
     {
+        $eavAttributes = CustomerAttributes::all();
+        $columns = [
+            Tables\Columns\TextColumn::make('name'),
+            Tables\Columns\TextColumn::make('email'),
+            Tables\Columns\TextColumn::make('email'),
+        ];
+
+        foreach ($eavAttributes as $col) {
+            $columns[] = DynamicAttribute::make($col->label)
+                ->toggleable(isToggledHiddenByDefault: true);
+        }
+
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('email'),
-            ])
+            ->columns($columns)
             ->filters([
                 //
             ])
