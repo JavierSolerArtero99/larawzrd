@@ -9,7 +9,7 @@ use Wzrd\Customer\Model\CustomerAttributesValues;
 
 class DynamicAttribute extends Column
 {
-    protected string $view = 'WzrdCustomer::WzrdCustomer.admin.tables.columns.status-switcher';
+    protected string $view = 'WzrdCustomer::WzrdCustomer.admin.tables.columns.dynamic-attribute';
     protected CustomerAttributes $attribute;
 
     public function setAttribute(CustomerAttributes $attr): Column
@@ -18,7 +18,7 @@ class DynamicAttribute extends Column
         return $this;
     }
 
-    public function attributeValue()
+    public function attributeValue(): ?CustomerAttributesValues
     {
         $customer = $this->getRecord();
         $attrValue = CustomerAttributesValues
@@ -28,6 +28,6 @@ class DynamicAttribute extends Column
             ])
             ->first();
             
-        return $attrValue ? $attrValue->value : "-";
+        return $attrValue;
     }
 }
