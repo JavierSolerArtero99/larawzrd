@@ -1,4 +1,3 @@
 <div>
-    {{ $getState() }}
-    {{$getRecord()->email}}
+    {{ $attributeValue() }}
 </div>

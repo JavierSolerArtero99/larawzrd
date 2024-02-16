@@ -47,6 +47,7 @@ class CustomerResource extends Resource
 
         foreach ($eavAttributes as $col) {
             $columns[] = DynamicAttribute::make($col->label)
+                ->setAttribute($col)
                 ->toggleable(isToggledHiddenByDefault: true);
         }
 
