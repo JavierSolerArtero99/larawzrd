@@ -24,8 +24,8 @@ return new class extends Migration
             $table->timestamps();
             $table->index(['customer_id', 'attribute_id', 'value']);
 
-            $table->foreign('customer_id')->references('id')->on('customers');
-            $table->foreign('attribute_id')->references('id')->on('customer_attributes');
+            $table->foreign('customer_id')->references('id')->on('customers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('attribute_id')->references('id')->on('customer_attributes')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
