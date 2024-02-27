@@ -1,15 +1,14 @@
 <?php
 
-namespace Wzrd\Customer\Tables\Columns;
+namespace Wzrd\Customer\Filament\Tables\Columns;
 
-use Closure;
 use Filament\Tables\Columns\Column;
 use Wzrd\Customer\Model\CustomerAttributes;
 use Wzrd\Customer\Model\CustomerAttributesValues;
 
 class DynamicAttribute extends Column
 {
-    protected string $view = 'WzrdCustomer::WzrdCustomer.admin.tables.columns.dynamic-attribute';
+    protected string $view = 'WzrdCustomer::admin.tables.columns.dynamic-attribute';
     protected CustomerAttributes $attribute;
 
     public function setAttribute(CustomerAttributes $attr): Column
@@ -27,7 +26,7 @@ class DynamicAttribute extends Column
                 ['attribute_id', '=', $this->attribute->id],
             ])
             ->first();
-            
+
         return $attrValue;
     }
 }

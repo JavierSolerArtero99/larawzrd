@@ -1,11 +1,11 @@
 <?php
 
-namespace Wzrd\Customer;
+namespace Wzrd\Customer\Filament\Plugins;
 
-use Wzrd\Customer\Resources\CustomerResource\CustomerResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Wzrd\Customer\Resources\CustomerAttributesResource\CustomerAttributesResource;
+use Wzrd\Customer\Filament\Resources\CustomerAttributesResource\CustomerAttributesResource;
+use Wzrd\Customer\Filament\Resources\CustomerResource\CustomerResource;
 
 class CustomersPlugin implements Plugin
 {

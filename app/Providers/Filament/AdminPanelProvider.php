@@ -3,8 +3,6 @@
 namespace App\Providers\Filament;
 
 use Cursosdesarrolloweb\FilamentLoginLogs\FilamentLoginLogs;
-use Wzrd\Cms\WzrdCmsPlugin;
-use Wzrd\Customer\CustomersPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -20,6 +18,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Wzrd\Cms\WzrdCmsPlugin;
+use Wzrd\Customer\Filament\Plugins\CustomersPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {

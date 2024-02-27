@@ -13,6 +13,6 @@ class LoginController extends Controller
     {
         $customer = Customer::find(1);
 
-        return view('WzrdCustomer::WzrdCustomer.pages.login', ['customer' => $customer]);
+        return view('WzrdCustomer::pages.login', ['customer' => $customer]);
     }
 }

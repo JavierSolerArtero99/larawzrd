@@ -6,7 +6,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
 use Wzrd\Cms\Resources\CmsResource\Pages\ThemeIndex;
-use Wzrd\Customer\Resources\CustomerResource\Pages\ListCustomers;
 
 class ThemeResource extends Resource
 {

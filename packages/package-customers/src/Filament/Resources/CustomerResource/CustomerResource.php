@@ -1,17 +1,16 @@
 <?php
 
-namespace Wzrd\Customer\Resources\CustomerResource;
+namespace Wzrd\Customer\Filament\Resources\CustomerResource;
 
-use Wzrd\Customer\Resources\CustomerResource\Pages;
-use Wzrd\Customer\Model\Customer;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Wzrd\Customer\Filament\Tables\Columns\DynamicAttribute;
+use Wzrd\Customer\Filament\Widgets\CustomersTotalCount;
+use Wzrd\Customer\Model\Customer;
 use Wzrd\Customer\Model\CustomerAttributes;
-use Wzrd\Customer\Tables\Columns\DynamicAttribute;
-use Wzrd\Customer\Widgets\CustomersTotalCount;
 
 class CustomerResource extends Resource
 {
@@ -76,9 +75,9 @@ class CustomerResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCustomers::route('/'),
-            'create' => Pages\CreateCustomer::route('/create'),
-            'edit' => Pages\EditCustomer::route('/{record}/edit'),
+            'index' => \Wzrd\Customer\Filament\Resources\CustomerResource\Pages\ListCustomers::route('/'),
+            'create' => \Wzrd\Customer\Filament\Resources\CustomerResource\Pages\CreateCustomer::route('/create'),
+            'edit' => \Wzrd\Customer\Filament\Resources\CustomerResource\Pages\EditCustomer::route('/{record}/edit'),
         ];
     }
 

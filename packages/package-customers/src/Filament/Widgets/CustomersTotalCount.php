@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Customer\Widgets;
+namespace Wzrd\Customer\Filament\Widgets;
 
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;

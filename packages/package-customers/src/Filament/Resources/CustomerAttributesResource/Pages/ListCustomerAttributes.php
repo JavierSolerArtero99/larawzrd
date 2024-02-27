@@ -1,11 +1,10 @@
 <?php
 
-namespace Wzrd\Customer\Resources\CustomerAttributesResource\Pages;
+namespace Wzrd\Customer\Filament\Resources\CustomerAttributesResource\Pages;
 
-use Wzrd\Customer\Resources\CustomerAttributesResource\CustomerAttributesResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
-use Wzrd\Customer\Widgets\CustomersTotalCount;
+use Wzrd\Customer\Filament\Resources\CustomerAttributesResource\CustomerAttributesResource;
 
 class ListCustomerAttributes extends ListRecords
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Wzrd\Customer\Resources\CustomerResource\Pages;
+namespace Wzrd\Customer\Filament\Resources\CustomerResource\Pages;
 
-use Wzrd\Customer\Resources\CustomerResource\CustomerResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use Wzrd\Customer\Filament\Resources\CustomerResource\CustomerResource;
 
 class EditCustomer extends EditRecord
 {

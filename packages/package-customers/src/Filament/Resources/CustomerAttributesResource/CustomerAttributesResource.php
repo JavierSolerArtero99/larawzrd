@@ -1,16 +1,14 @@
 <?php
 
-namespace Wzrd\Customer\Resources\CustomerAttributesResource;
+namespace Wzrd\Customer\Filament\Resources\CustomerAttributesResource;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Wzrd\Customer\Filament\Resources\CustomerAttributesResource\Pages\ListCustomerAttributes;
 use Wzrd\Customer\Model\CustomerAttributes;
-use Filament\Forms\Components\TextInput;
-use Wzrd\Customer\Model\Customer;
-use Wzrd\Customer\Resources\CustomerAttributesResource\Pages\ListCustomerAttributes;
-use Wzrd\Customer\Resources\CustomerResource\Pages\ListCustomers;
 
 class CustomerAttributesResource extends Resource
 {
