@@ -1,4 +1,4 @@
-@extends('WzrdTheme::WzrdTheme.layouts.maincentered')
+@extends('WzrdTheme::layouts.maincentered')
 
 @section('main')
 <div class="py-52">

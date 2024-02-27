@@ -352,7 +352,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/filament-login-logs",
-                "reference": "2fdc8b80fd661039a04c406c7c17a0b213a75cbf"
+                "reference": "d2f07c6465eaaf80d6bb9e7e814f8626bbf76f5e"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7846,11 +7846,12 @@
             "dist": {
                 "type": "path",
                 "url": "packages/package-cms",
-                "reference": "e6aabc39ecf1ae24f039538ddbba38a6054ffc30"
+                "reference": "321f8f046ed40001aa030d1eb0d4949159a7a7f2"
             },
             "require": {
                 "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
+                "livewire/livewire": "^3.2",
+                "log1x/blade-filetype-icons": "^1.0"
             },
             "require-dev": {
                 "laravel/pint": "^1.13"
@@ -7887,11 +7888,12 @@
             "dist": {
                 "type": "path",
                 "url": "packages/package-customers",
-                "reference": "01b0912065022657ce4678ff58c4cafa932a1921"
+                "reference": "cd842599e6de06145492e04b7d4fda3793c13743"
             },
             "require": {
                 "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
+                "livewire/livewire": "^3.2",
+                "log1x/blade-filetype-icons": "^1.0"
             },
             "require-dev": {
                 "laravel/pint": "^1.13"
@@ -10402,6 +10404,7 @@
     "stability-flags": {
         "cursosdesarrolloweb/filament-login-logs-plugin": 20,
         "wzrd/package-cms": 20,
+        "wzrd/package-customers": 20,
         "wzrd/package-theme": 20
     },
     "prefer-stable": true,

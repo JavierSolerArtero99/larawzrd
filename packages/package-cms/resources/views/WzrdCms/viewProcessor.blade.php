@@ -1,4 +1,4 @@
-@extends('WzrdTheme::WzrdTheme.layouts.' . $layout)
+@extends('WzrdTheme::layouts.' . $layout)
 
 @section('title', $title)
 
