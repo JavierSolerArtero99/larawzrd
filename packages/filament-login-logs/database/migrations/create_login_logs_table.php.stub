@@ -16,10 +16,5 @@ return new class extends Migration
             $table->string('user_agent');
             $table->timestamp('login_at');
         });
-
-    public function down()
-    {
-        Schema::dropIfExists('login_logs');
-    }
     }
 };
