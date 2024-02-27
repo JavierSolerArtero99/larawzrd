@@ -11,6 +11,7 @@ class BlogResource extends Resource
 {
     protected static ?int $navigationSort = 30;
     protected static ?string $navigationIcon = 'heroicon-o-document';
+    protected static ?string $navigationLabel = "Blog";
 
     public static function getNavigationGroup(): ?string
     {
