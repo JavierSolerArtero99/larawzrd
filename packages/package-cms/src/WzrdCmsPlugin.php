@@ -4,7 +4,9 @@ namespace Wzrd\Cms;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Wzrd\Cms\Resources\CmsResource\BlogResource;
 use Wzrd\Cms\Resources\CmsResource\ContentResource;
+use Wzrd\Cms\Resources\CmsResource\ThemeResource;
 
 class WzrdCmsPlugin implements Plugin
 {
@@ -23,6 +25,8 @@ class WzrdCmsPlugin implements Plugin
         $panel
             ->resources([
                 ContentResource::class,
+                ThemeResource::class,
+                BlogResource ::class,
             ]);
     }
 

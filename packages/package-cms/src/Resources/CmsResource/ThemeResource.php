@@ -2,19 +2,24 @@
 
 namespace Wzrd\Cms\Resources\CmsResource;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Filament\Forms\Form;
 use Wzrd\Customer\Resources\CustomerResource\Pages\ListCustomers;
 
-class ContentResource extends Resource
+class ThemeResource extends Resource
 {
-    protected static ?int $navigationSort = 20;
-    protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
+    protected static ?int $navigationSort = 10;
+    protected static ?string $navigationIcon = 'heroicon-o-paint-brush';
 
     public static function getNavigationGroup(): ?string
     {
         return 'Content';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return "Tema";
     }
 
     public static function getPages(): array
