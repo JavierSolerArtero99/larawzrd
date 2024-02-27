@@ -5,7 +5,7 @@ namespace Wzrd\Cms\Resources\CmsResource;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Wzrd\Customer\Resources\CustomerResource\Pages\ListCustomers;
+use Wzrd\Cms\Resources\CmsResource\Pages\BlogIndex;
 
 class BlogResource extends Resource
 {
@@ -25,7 +25,7 @@ class BlogResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListCustomers::route('/'),
+            'index' => BlogIndex::route('/'),
         ];
     }
 
