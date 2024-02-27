@@ -1,9 +1,9 @@
 <?php
 
-namespace Wzrd\Cms\Resources\CmsResource\Pages;
+namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages;
 
 use Filament\Resources\Pages\Page;
-use Wzrd\Cms\Resources\CmsResource\ThemeResource;
+use Wzrd\Cms\Filament\Resources\CmsResource\ThemeResource;
 
 class ThemeIndex extends Page
 {

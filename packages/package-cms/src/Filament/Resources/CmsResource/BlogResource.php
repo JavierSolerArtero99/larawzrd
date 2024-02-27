@@ -1,26 +1,32 @@
 <?php
 
-namespace Wzrd\Cms\Resources\CmsResource;
+namespace Wzrd\Cms\Filament\Resources\CmsResource;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Filament\Forms\Form;
-use Wzrd\Cms\Resources\CmsResource\Pages\ContentIndex;
+use Wzrd\Cms\Filament\Resources\CmsResource\Pages\BlogIndex;
 
-class ContentResource extends Resource
+class BlogResource extends Resource
 {
-    protected static ?int $navigationSort = 20;
-    protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
+    protected static ?int $navigationSort = 30;
+    protected static ?string $navigationIcon = 'heroicon-o-document';
+    protected static ?string $navigationLabel = "Blog";
 
     public static function getNavigationGroup(): ?string
     {
         return 'Content';
     }
 
+    public static function getLabel(): ?string
+    {
+        return "Blog";
+    }
+
     public static function getPages(): array
     {
         return [
-            'index' => ContentIndex::route('/'),
+            'index' => BlogIndex::route('/'),
         ];
     }
 
