@@ -1,3 +1,3 @@
 <x-filament-panels::page>
-    <h1>Hola mundo desde el blog</h1>
+    <h1>Hola desde el content</h1>
 </x-filament-panels::page>

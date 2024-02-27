@@ -5,6 +5,7 @@ namespace Wzrd\Cms\Resources\CmsResource;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
+use Wzrd\Cms\Resources\CmsResource\Pages\ThemeIndex;
 use Wzrd\Customer\Resources\CustomerResource\Pages\ListCustomers;
 
 class ThemeResource extends Resource
@@ -25,7 +26,7 @@ class ThemeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListCustomers::route('/'),
+            'index' => ThemeIndex::route('/'),
         ];
     }
 
