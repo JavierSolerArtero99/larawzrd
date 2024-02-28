@@ -2,10 +2,11 @@
 
 namespace Wzrd\Cms;
 
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Filament\Resources\CmsResource\Fields\DynamicField;
+use Wzrd\Cms\Filament\Resources\CmsResource\Fields\DynamicFieldInterface;
 use Wzrd\Cms\Model\Api\BlockInterface;
 use Wzrd\Cms\Model\Api\CmsServiceInterface;
 use Wzrd\Cms\Model\Api\ViewBuilderInterface;
@@ -15,7 +16,7 @@ use Wzrd\Cms\Model\Implement\ViewBuilder;
 use Wzrd\Cms\Model\Repository\ThemeRepository;
 use Wzrd\Cms\Model\Repository\ThemeRepositoryInterface;
 
-class WzrdCmsProvider extends PackageServiceProvider implements DeferrableProvider
+class WzrdCmsProvider extends PackageServiceProvider
 {
     public static string $name = 'wzrd/package-cms';
 
@@ -39,6 +40,7 @@ class WzrdCmsProvider extends PackageServiceProvider implements DeferrableProvid
         $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
         $this->app->bind(BlockInterface::class, Block::class);
         $this->app->bind(ThemeRepositoryInterface::class, ThemeRepository::class);
+        $this->app->bind(DynamicFieldInterface::class, DynamicField::class);
     }
 
     protected function getMigrations(): array

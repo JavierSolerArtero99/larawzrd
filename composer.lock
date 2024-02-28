@@ -10403,7 +10403,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cursosdesarrolloweb/filament-login-logs-plugin": 20,
-        "wzrd/package-cms": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20
     },
