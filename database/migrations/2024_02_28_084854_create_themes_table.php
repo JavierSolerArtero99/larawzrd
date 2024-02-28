@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('theme', function (Blueprint $table) {
             $table->id();
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->json('value');
             $table->string('backend_type');
         });
