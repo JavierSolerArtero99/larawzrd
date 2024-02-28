@@ -2,6 +2,7 @@
 
 namespace Wzrd\Cms;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -11,8 +12,10 @@ use Wzrd\Cms\Model\Api\ViewBuilderInterface;
 use Wzrd\Cms\Model\Implement\Block;
 use Wzrd\Cms\Model\Implement\CmsService;
 use Wzrd\Cms\Model\Implement\ViewBuilder;
+use Wzrd\Cms\Model\Repository\ThemeRepository;
+use Wzrd\Cms\Model\Repository\ThemeRepositoryInterface;
 
-class WzrdCmsProvider extends PackageServiceProvider
+class WzrdCmsProvider extends PackageServiceProvider implements DeferrableProvider
 {
     public static string $name = 'wzrd/package-cms';
 
@@ -35,6 +38,7 @@ class WzrdCmsProvider extends PackageServiceProvider
         $this->app->bind(CmsServiceInterface::class, CmsService::class);
         $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
         $this->app->bind(BlockInterface::class, Block::class);
+        $this->app->bind(ThemeRepositoryInterface::class, ThemeRepository::class);
     }
 
     protected function getMigrations(): array

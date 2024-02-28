@@ -1,3 +1,7 @@
 <x-filament-panels::page>
-    <h1>Hola desde el theme</h1>
+    <x-filament::section>
+        <x-slot name="heading">
+            Header
+        </x-slot>
+    </x-filament::section>
 </x-filament-panels::page>
