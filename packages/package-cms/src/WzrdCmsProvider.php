@@ -2,6 +2,7 @@
 
 namespace Wzrd\Cms;
 
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wzrd\Cms\Model\Api\BlockInterface;
@@ -19,6 +20,12 @@ class WzrdCmsProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
+            ->hasInstallCommand(function (InstallCommand $command) {
+                $command
+                    ->publishMigrations()
+                    ->askToRunMigrations();
+            })
+            ->hasMigrations($this->getMigrations())
             ->hasRoute('CmsRouteProcessor')
             ->hasViews("WzrdCms");
     }
@@ -32,6 +39,6 @@ class WzrdCmsProvider extends PackageServiceProvider
 
     protected function getMigrations(): array
     {
-        return [];
+        return ['create_themes_table'];
     }
 }
