@@ -10,9 +10,7 @@ class DynamicField implements DynamicFieldInterface
 
     public function field(string $backendType): TextInput
     {
-        $field = App::make($backendType, ['name' => 'value']);
-
-        return HeaderField::make('slug');
+        return App::make($backendType, ['name' => 'value']);
     }
 
 }
