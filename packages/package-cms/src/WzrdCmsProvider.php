@@ -50,6 +50,9 @@ class WzrdCmsProvider extends PackageServiceProvider
 
     protected function getMigrations(): array
     {
-        return ['create_themes_table'];
+        return [
+            'create_themes_table',
+            'create_content_table',
+        ];
     }
 }

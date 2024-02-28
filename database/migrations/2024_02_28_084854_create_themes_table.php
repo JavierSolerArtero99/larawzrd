@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->json('value');
-            $table->string('backend_type');
         });
     }
 
