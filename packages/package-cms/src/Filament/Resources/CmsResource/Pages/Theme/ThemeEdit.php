@@ -61,6 +61,7 @@ class ThemeEdit extends EditRecord
                         ]),
                 ]),
             Section::make('Lateral Blocks')
+                ->hidden(fn(Get $get): bool => $get('slug') != 'header')
                 ->statePath('sidebar')
                 ->schema([
                     Select::make('blocks')
