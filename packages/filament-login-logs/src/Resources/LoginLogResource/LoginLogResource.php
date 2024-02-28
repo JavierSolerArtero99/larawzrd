@@ -12,7 +12,7 @@ class LoginLogResource extends Resource
 {
     protected static ?string $model = LoginLog::class;
     protected static ?int $navigationSort = 100;
-    protected static ?string $navigationIcon = 'filetype-s-log';
+    protected static ?string $navigationIcon = 'heroicon-o-lock-closed';
 
     public static function getNavigationGroup(): ?string
     {
