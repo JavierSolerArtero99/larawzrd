@@ -5,7 +5,6 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource;
 use Filament\Resources\Resource;
 use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme\ThemeEdit;
 use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme\ThemeList;
-use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme\ThemeView;
 use Wzrd\Cms\Model\Theme;
 
 class ThemeResource extends Resource
@@ -24,7 +23,6 @@ class ThemeResource extends Resource
     {
         return [
             'index' => ThemeList::route('/'),
-            'view' => ThemeView::route('/{record}'),
             'edit' => ThemeEdit::route('/{record}/edit'),
         ];
     }

@@ -2,9 +2,11 @@
 
 namespace Wzrd\Cms;
 
+use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Model\Api\BlockInterface;
 use Wzrd\Cms\Model\Api\CmsServiceInterface;
 use Wzrd\Cms\Model\Api\ViewBuilderInterface;
@@ -25,6 +27,7 @@ class WzrdCmsProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->askToRunMigrations();
             })
+            ->hasConfigFile(['cms-config'])
             ->hasMigrations($this->getMigrations())
             ->hasRoute('CmsRouteProcessor')
             ->hasViews("WzrdCms");
@@ -32,9 +35,17 @@ class WzrdCmsProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
+        /* Bindings */
         $this->app->bind(CmsServiceInterface::class, CmsService::class);
         $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
         $this->app->bind(BlockInterface::class, Block::class);
+
+        /* Config */
+        Config::push(ConfigInterface::SIDEBAR_BLOCKS, [
+            'draft' => 'Draft',
+            'reviewing' => 'Compareee',
+            'published' => 'Published',
+        ]);
     }
 
     protected function getMigrations(): array

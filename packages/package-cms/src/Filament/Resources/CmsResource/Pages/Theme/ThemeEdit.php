@@ -5,6 +5,8 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\HtmlString;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Get;
@@ -57,6 +59,14 @@ class ThemeEdit extends EditRecord
                                         ->columnSpan(2),
                                 ]),
                         ]),
+                ]),
+            Section::make('Lateral Blocks')
+                ->statePath('sidebar')
+                ->schema([
+                    Select::make('blocks')
+                        ->searchable()
+                        ->multiple()
+                        ->options(Config::get("sidebar_blocks"))
                 ]),
         ]);
     }
