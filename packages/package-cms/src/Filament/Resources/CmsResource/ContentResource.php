@@ -5,7 +5,7 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Wzrd\Cms\Filament\Resources\CmsResource\Pages\ContentIndex;
+use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content\ContentIndex;
 
 class ContentResource extends Resource
 {

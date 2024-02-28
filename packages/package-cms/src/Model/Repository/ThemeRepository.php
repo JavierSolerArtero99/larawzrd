@@ -2,12 +2,13 @@
 
 namespace Wzrd\Cms\Model\Repository;
 
-class ThemeRepository
+use Wzrd\Cms\Model\Theme;
+use Illuminate\Database\Eloquent\Collection;
+
+class ThemeRepository implements ThemeRepositoryInterface
 {
-
-    public function geteee()
+    public function allTheme(): Collection
     {
-        return "Contenido";
+        return Theme::all();
     }
-
 }

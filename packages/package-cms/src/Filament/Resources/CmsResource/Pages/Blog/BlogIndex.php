@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages;
+namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Blog;
 
 use Filament\Resources\Pages\Page;
 use Wzrd\Cms\Filament\Resources\CmsResource\BlogResource;
