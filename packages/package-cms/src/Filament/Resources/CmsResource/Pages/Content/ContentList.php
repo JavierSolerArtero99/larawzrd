@@ -3,9 +3,10 @@
 namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content;
 
 use Filament\Resources\Pages\ListRecords;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Actions;
 use Filament\Tables\Table;
+use Wzrd\Cms\Filament\Resources\CmsResource\Columns\ContentStatus;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 
 
@@ -24,11 +25,15 @@ class ContentList extends ListRecords
     {
         return $table
             ->columns([
+                ContentStatus::make('status')
+                    ->label(""),
                 TextColumn::make('page_title'),
                 TextColumn::make('slug'),
             ])
             ->filters([])
-            ->actions([])
+            ->actions([
+                EditAction::make()
+            ])
             ->bulkActions([]);
     }
 
