@@ -2,11 +2,10 @@
 
 namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages;
 
-use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Pages\Page;
 use Wzrd\Cms\Filament\Resources\CmsResource\ThemeResource;
-use Wzrd\Cms\Model\Repository\ThemeRepositoryInterface;
 
-class ThemeIndex extends ListRecords
+class ThemeIndex extends Page
 {
     protected ?string $heading = "";
     protected static string $view = 'WzrdCms::admin.pages.theme';
