@@ -10,6 +10,4 @@ class ContentEdit extends EditRecord
 
     protected static string $resource = ContentResource::class;
 
-
-
 }
