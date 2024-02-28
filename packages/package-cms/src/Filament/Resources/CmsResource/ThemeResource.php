@@ -11,15 +11,11 @@ class ThemeResource extends Resource
     protected static ?string $model = Theme::class;
     protected static ?int $navigationSort = 10;
     protected static ?string $navigationIcon = 'heroicon-o-paint-brush';
+    protected static ?string $navigationLabel = "Tema";
 
     public static function getNavigationGroup(): ?string
     {
         return 'Content';
-    }
-
-    public static function getLabel(): ?string
-    {
-        return "Tema";
     }
 
     public static function getPages(): array
