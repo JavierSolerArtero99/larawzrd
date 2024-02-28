@@ -5,6 +5,7 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Section;
+use Illuminate\Support\HtmlString;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Get;
 use Filament\Forms\Components\TextInput;
@@ -25,6 +26,10 @@ class ThemeEdit extends EditRecord
                 ->schema([
                     FileUpload::make('logo')
                         ->image()
+                        ->visible()
+                        ->preserveFilenames()
+                        ->deletable()
+                        ->imageEditor()
                         ->hiddenLabel()
                         ->imageEditor(),
                 ]),
@@ -40,12 +45,14 @@ class ThemeEdit extends EditRecord
                             TextInput::make('link'),
                             Repeater::make('children')
                                 ->label('Level 2 Sections')
+                                ->columnSpan(2)
                                 ->collapsible()
                                 ->collapsed()
                                 ->defaultItems(0)
                                 ->schema([
                                     TextInput::make('name'),
-                                    TextInput::make('icon'),
+                                    TextInput::make('icon')
+                                        ->helperText(new HtmlString("<a href='https://heroicons.com/' target='_blank'>Icons List</a>")),
                                     Textarea::make('description')
                                         ->columnSpan(2),
                                 ]),
