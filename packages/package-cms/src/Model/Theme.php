@@ -10,5 +10,7 @@ class Theme extends Model
     use HasFactory;
 
     protected $table = 'theme';
+    public $timestamps = false;
+    protected $fillable = ['slug'];
 
 }

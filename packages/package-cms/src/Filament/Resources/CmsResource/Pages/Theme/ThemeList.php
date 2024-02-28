@@ -3,6 +3,7 @@
 namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme;
 
 use Filament\Resources\Pages\ListRecords;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -21,6 +22,7 @@ class ThemeList extends ListRecords
             ])
             ->actions([
                 ViewAction::make(),
+                EditAction::make(),
             ]);
     }
 }
