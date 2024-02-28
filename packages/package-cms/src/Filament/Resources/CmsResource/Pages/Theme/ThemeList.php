@@ -21,8 +21,8 @@ class ThemeList extends ListRecords
                 TextColumn::make('slug')
             ])
             ->actions([
-                ViewAction::make(),
                 EditAction::make(),
+                ViewAction::make(),
             ]);
     }
 }

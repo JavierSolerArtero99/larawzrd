@@ -2,13 +2,9 @@
 
 namespace Wzrd\Cms;
 
-use Illuminate\Support\Facades\App;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wzrd\Cms\Filament\Resources\CmsResource\Fields\DynamicField;
-use Wzrd\Cms\Filament\Resources\CmsResource\Fields\DynamicFieldInterface;
-use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Theme\ThemeEdit;
 use Wzrd\Cms\Model\Api\BlockInterface;
 use Wzrd\Cms\Model\Api\CmsServiceInterface;
 use Wzrd\Cms\Model\Api\ViewBuilderInterface;
@@ -39,7 +35,6 @@ class WzrdCmsProvider extends PackageServiceProvider
         $this->app->bind(CmsServiceInterface::class, CmsService::class);
         $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
         $this->app->bind(BlockInterface::class, Block::class);
-        $this->app->bind(DynamicFieldInterface::class, DynamicField::class);
     }
 
     protected function getMigrations(): array
