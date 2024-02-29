@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Components\Text\Text;
 use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Model\Api\BlockInterface;
 use Wzrd\Cms\Model\Api\CmsServiceInterface;
@@ -46,6 +47,9 @@ class WzrdCmsProvider extends PackageServiceProvider
             'reviewing' => 'Compareee',
             'published' => 'Published',
         ]);
+
+        /* Componentes WZRD */
+        Config::push(ConfigInterface::WZRD_COMPONENTS, Text::class);
     }
 
     protected function getMigrations(): array
