@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'sidebar_blocks' => [],
+    'header_sidebar_blocks' => [],
 ];

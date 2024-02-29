@@ -4,5 +4,5 @@ namespace Wzrd\Cms\Config;
 
 interface ConfigInterface
 {
-    const SIDEBAR_BLOCKS = "sidebar_blocks";
+    const HEADER_SIDEBAR_BLOCKS = "header_sidebar_blocks";
 }

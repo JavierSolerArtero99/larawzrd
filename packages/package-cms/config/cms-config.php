@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'sidebar_blocks' => [],
+    'header_sidebar_blocks' => [],
+    'editor_components_components' => [],
 ];

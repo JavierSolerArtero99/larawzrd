@@ -67,7 +67,7 @@ class ThemeEdit extends EditRecord
                     Select::make('blocks')
                         ->searchable()
                         ->multiple()
-                        ->options(Config::get("sidebar_blocks"))
+                        ->options(Config::get("header_sidebar_blocks"))
                 ]),
         ]);
     }

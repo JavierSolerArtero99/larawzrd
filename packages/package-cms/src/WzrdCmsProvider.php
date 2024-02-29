@@ -40,9 +40,9 @@ class WzrdCmsProvider extends PackageServiceProvider
         $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
         $this->app->bind(BlockInterface::class, Block::class);
 
-        /* Config */
-        Config::push(ConfigInterface::SIDEBAR_BLOCKS, [
-            'draft' => 'Draft',
+        /* Bloques laterales del header, cambiar por clases*/
+        Config::push(ConfigInterface::HEADER_SIDEBAR_BLOCKS, [
+            'login' => 'Login',
             'reviewing' => 'Compareee',
             'published' => 'Published',
         ]);
