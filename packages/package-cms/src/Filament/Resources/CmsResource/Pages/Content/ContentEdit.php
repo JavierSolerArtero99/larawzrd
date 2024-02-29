@@ -9,11 +9,12 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
-use Wzrd\Cms\Components\Text\Text;
 use Wzrd\Cms\Config\ConfigInterface;
+use Wzrd\Cms\Filament\Resources\CmsResource\Components\SlotsRepeater;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\ContentStatusInterface;
 
@@ -21,7 +22,7 @@ class ContentEdit extends EditRecord
 {
 
     protected static string $resource = ContentResource::class;
-    private int $nextSlot = 0;
+    protected static int $selectedBlock = 1;
 
     public function form(Form $form): Form
     {
@@ -38,17 +39,20 @@ class ContentEdit extends EditRecord
             Textarea::make('meta_desc')->columnSpanFull(),
 
 
+
+
+
+
+
             Section::make('Content')
                 ->label("Slots")
                 ->schema([
-                    Repeater::make('slots')
+                    SlotsRepeater::make('slots')
                         ->hiddenLabel()
                         ->cloneable()
                         ->collapsible()
                         ->addActionLabel('Add Slot')
-                        ->deleteAction(
-                            fn(Action $action) => $action->requiresConfirmation(),
-                        )
+                        ->deleteAction(fn(Action $action) => $action->requiresConfirmation())
                         ->addAction(
                             fn(Action $action) => $action
                                 ->form([
@@ -57,11 +61,10 @@ class ContentEdit extends EditRecord
                                         ->searchable()
                                         ->options($this->availableComponentNames())
                                         ->required()
-                                        ->key('selectedNewComponent')
                                         ->live()
                                 ])
                                 ->action(function (array $data, Action $action): void {
-                                    $this->nextSlot = $this->availableComponentClasses()[$data['newComponent']];
+                                    $this::$selectedBlock = $data['newComponent'];
                                     $action
                                         ->getComponent()
                                         ->getContainer()
@@ -70,9 +73,22 @@ class ContentEdit extends EditRecord
                                         ->fill();
                                 })
                         )
-                        ->schema([$this->getSelectedComponent()])
+                        ->schema(fn (Get $get): array => $this->getSelectedComponent($this::$selectedBlock))
                         ->key('slotsComponent'),
                 ]),
+
+
+
+
+
+
+
+
+
+
+
+
+
         ]);
     }
 
@@ -92,8 +108,8 @@ class ContentEdit extends EditRecord
         );
     }
 
-    public function getSelectedComponent()
+    public function getSelectedComponent(int $selectedBlock): array
     {
-        return App::make($this->availableComponentClasses()[$this->nextSlot])->adminEdit();
+        return [App::make($this->availableComponentClasses()[$selectedBlock])->adminEdit()];
     }
 }
