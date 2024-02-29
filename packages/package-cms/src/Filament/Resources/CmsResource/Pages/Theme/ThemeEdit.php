@@ -42,6 +42,7 @@ class ThemeEdit extends EditRecord
                         ->label('Level 1 Sections')
                         ->collapsible()
                         ->collapsed()
+                        ->cloneable()
                         ->schema([
                             TextInput::make('name'),
                             TextInput::make('link'),

@@ -16,14 +16,13 @@ class Text extends ComponentInterface implements TextInterface
         return Section::make(TextInterface::COMPONENT_NAME)
             ->statePath($this->generateUid())
             ->collapsible()
-            ->collapsed()
             ->schema([
                 TextInput::make(self::COMPONENT_VALUE),
                 Select::make(self::HTML_TAG)
                     ->options(self::HTML_TAG_OPTIONS)
                     ->searchable()
                     ->native(false),
-                TagsInput::make(self::CSS_CLASSES),
+                TagsInput::make(self::CSS_CLASSES)
             ]);
     }
 }
