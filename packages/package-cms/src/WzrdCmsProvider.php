@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Components\Banner\Banner;
 use Wzrd\Cms\Components\Text\Text;
 use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Model\Api\BlockInterface;
@@ -50,6 +51,7 @@ class WzrdCmsProvider extends PackageServiceProvider
 
         /* Componentes WZRD */
         Config::push(ConfigInterface::WZRD_COMPONENTS, Text::class);
+        Config::push(ConfigInterface::WZRD_COMPONENTS, Banner::class);
     }
 
     protected function getMigrations(): array
