@@ -9,22 +9,19 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Filament\Forms\Get;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
-use Wzrd\Cms\Components\Banner\Banner;
 use Wzrd\Cms\Components\Text\Text;
 use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
-use Wzrd\Cms\Model\Content;
 use Wzrd\Cms\Model\ContentStatusInterface;
 
 class ContentEdit extends EditRecord
 {
 
     protected static string $resource = ContentResource::class;
-    public bool $nextSlot = true;
+    private int $nextSlot = 0;
 
     public function form(Form $form): Form
     {
@@ -39,6 +36,8 @@ class ContentEdit extends EditRecord
                 ])
                 ->native(false),
             Textarea::make('meta_desc')->columnSpanFull(),
+
+
             Section::make('Content')
                 ->label("Slots")
                 ->schema([
@@ -56,31 +55,45 @@ class ContentEdit extends EditRecord
                                     Select::make('newComponent')
                                         ->label('Search the component')
                                         ->searchable()
-                                        ->options(
-                                            array_map(
-                                                fn($componentClass) => $componentClass::COMPONENT_NAME,
-                                                Config::get(ConfigInterface::WZRD_COMPONENTS)
-                                            )
-                                        )
+                                        ->options($this->availableComponentNames())
+                                        ->required()
+                                        ->key('selectedNewComponent')
                                         ->live()
-                                        ->afterStateUpdated(function (Select $component) {
-                                            if ($section = $component->getContainer()->getComponent('dynamicTypeFields')) {
-                                                $section->getChildComponentContainer()
-                                                    ->fill();
-                                            }
-                                        })
-                                        ->required(),
                                 ])
+                                ->action(function (array $data, Action $action): void {
+                                    $this->nextSlot = $this->availableComponentClasses()[$data['newComponent']];
+                                    $action
+                                        ->getComponent()
+                                        ->getContainer()
+                                        ->getComponent('slotsComponent')
+                                        ->getChildComponentContainer()
+                                        ->fill();
+                                })
                         )
-                        ->schema(fn (Get $get): array => $this->getSelectedComponent($get('type')))
-                        ->key('dynamicTypeFields'),
+                        ->schema([$this->getSelectedComponent()])
+                        ->key('slotsComponent'),
                 ]),
         ]);
     }
 
-    public function getSelectedComponent($newComponent)
+    private function availableComponentNames()
     {
-        // obtener right component
-        return [App::make(Text::class)->adminEdit()];
+        return array_map(
+            fn($componentClass) => $componentClass::COMPONENT_NAME,
+            Config::get(ConfigInterface::WZRD_COMPONENTS)
+        );
+    }
+
+    private function availableComponentClasses(): array
+    {
+        return array_map(
+            fn($componentClass) => $componentClass,
+            Config::get(ConfigInterface::WZRD_COMPONENTS)
+        );
+    }
+
+    public function getSelectedComponent()
+    {
+        return App::make($this->availableComponentClasses()[$this->nextSlot])->adminEdit();
     }
 }
