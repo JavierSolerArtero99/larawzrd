@@ -3,6 +3,7 @@
         .status {
             padding: 10px;
             border-radius: 100px;
+            margin-left: 10px;
         }
         .published {
             background-color: #41D94CFF;
