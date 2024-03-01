@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
         "wzrd/package-cms": "dev-main",
+        "wzrd/package-cms-bridge": "dev-main",
         "wzrd/package-customers": "dev-main",
         "wzrd/package-theme": "dev-main"
     },

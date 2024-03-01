@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "490a78efdbc21a513908e15a2204c720",
+    "content-hash": "837386c91ce8c81ddd40d68129652df0",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7883,6 +7883,47 @@
             }
         },
         {
+            "name": "wzrd/package-cms-bridge",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-cms-bridge",
+                "reference": "dfdbc1ea642409a1ff7ab4d906ed653f2cd1860a"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\CmsBridge\\WzrdCmsBridgeProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\CmsBridge\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "wzrd/package-customers",
             "version": "dev-main",
             "dist": {
@@ -10403,6 +10444,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cursosdesarrolloweb/filament-login-logs-plugin": 20,
+        "wzrd/package-cms": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20
     },
