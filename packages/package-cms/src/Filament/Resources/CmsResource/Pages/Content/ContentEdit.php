@@ -12,10 +12,10 @@ use Filament\Forms\Form;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
-use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 use Wzrd\Cms\Model\Theme\LayoutInterface;
+use Wzrd\CmsBridge\Config\ConfigInterface;
 
 class ContentEdit extends EditRecord
 {

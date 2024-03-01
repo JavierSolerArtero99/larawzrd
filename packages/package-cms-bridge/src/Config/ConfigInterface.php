@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Config;
+namespace Wzrd\CmsBridge\Config;
 
 interface ConfigInterface
 {

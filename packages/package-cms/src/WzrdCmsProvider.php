@@ -2,11 +2,9 @@
 
 namespace Wzrd\Cms;
 
-use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wzrd\Cms\Config\ConfigInterface;
 
 class WzrdCmsProvider extends PackageServiceProvider
 {
@@ -25,16 +23,6 @@ class WzrdCmsProvider extends PackageServiceProvider
             ->hasMigrations($this->getMigrations())
             ->hasRoute('CmsRouteProcessor')
             ->hasViews("WzrdCms");
-    }
-
-    public function registeringPackage(): void
-    {
-        /* Bloques laterales del header, cambiar por clases*/
-        Config::push(ConfigInterface::HEADER_SIDEBAR_BLOCKS, [
-            'login' => 'Login',
-            'reviewing' => 'Compareee',
-            'published' => 'Published',
-        ]);
     }
 
     protected function getMigrations(): array
