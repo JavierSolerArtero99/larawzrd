@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\WzrdComponents\Api;
+namespace Wzrd\CmsBridge\WzrdComponents\Api;
 
 abstract class ComponentInterface
 {

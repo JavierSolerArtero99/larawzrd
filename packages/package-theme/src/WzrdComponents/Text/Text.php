@@ -6,7 +6,7 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
-use Wzrd\Cms\WzrdComponents\Api\ComponentInterface;
+use Wzrd\CmsBridge\WzrdComponents\Api\ComponentInterface;
 
 class Text extends ComponentInterface implements TextInterface
 {

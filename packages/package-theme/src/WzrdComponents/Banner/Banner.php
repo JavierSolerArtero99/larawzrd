@@ -7,7 +7,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Wzrd\Cms\WzrdComponents\Api\ComponentInterface;
+use Wzrd\CmsBridge\WzrdComponents\Api\ComponentInterface;
 
 class Banner extends ComponentInterface implements BannerInterface
 {
