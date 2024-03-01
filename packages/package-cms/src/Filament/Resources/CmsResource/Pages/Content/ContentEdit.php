@@ -24,10 +24,11 @@ class ContentEdit extends EditRecord
     public function form(Form $form): Form
     {
         return $form->schema([
-            TextInput::make('page_title'),
-            TextInput::make('meta_title'),
-            TextInput::make('slug'),
+            TextInput::make('page_title')->required(),
+            TextInput::make('meta_title')->required(),
+            TextInput::make('slug')->required()->unique(),
             Select::make('status')
+                ->required()
                 ->options([
                     ContentStatusInterface::PUBLISHED => "Published",
                     ContentStatusInterface::DRAFT => "Draft",
@@ -35,12 +36,19 @@ class ContentEdit extends EditRecord
                 ->native(false),
             Textarea::make('meta_desc')->columnSpanFull(),
             Section::make('Content')
+                ->collapsible()
+                ->collapsed()
                 ->label("Slots")
                 ->schema([
                     Builder::make('body')
+                        ->blockNumbers(false)
+                        ->blockPickerColumns(2)
+                        ->blockPickerWidth('2xl')
                         ->hiddenLabel()
                         ->cloneable()
                         ->collapsible()
+                        ->collapsed()
+                        ->persistCollapsed()
                         ->addActionLabel('Add Slot')
                         ->deleteAction(fn(Action $action) => $action->requiresConfirmation())
                         ->blocks($this->getAllComponents()),

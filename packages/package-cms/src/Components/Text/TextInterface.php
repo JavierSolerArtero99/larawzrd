@@ -5,6 +5,7 @@ namespace Wzrd\Cms\Components\Text;
 interface TextInterface
 {
     const COMPONENT_NAME = "Text";
+    const COMPONENT_ICON = "heroicon-o-document-text";
     const COMPONENT_VALUE = "value";
     const HTML_TAG = "html_tag";
     const CSS_CLASSES = "css_classes";

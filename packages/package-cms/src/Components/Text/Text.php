@@ -14,6 +14,7 @@ class Text extends ComponentInterface implements TextInterface
     public function adminEdit()
     {
         return Block::make(TextInterface::COMPONENT_NAME)
+            ->icon(self::COMPONENT_ICON)
             ->schema([
                 Textarea::make(self::COMPONENT_VALUE),
                 Select::make(self::HTML_TAG)
