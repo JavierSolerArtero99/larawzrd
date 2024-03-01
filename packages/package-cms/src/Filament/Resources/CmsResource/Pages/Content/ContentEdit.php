@@ -37,7 +37,7 @@ class ContentEdit extends EditRecord
             Section::make('Content')
                 ->label("Slots")
                 ->schema([
-                    Builder::make('slots')
+                    Builder::make('body')
                         ->hiddenLabel()
                         ->cloneable()
                         ->collapsible()

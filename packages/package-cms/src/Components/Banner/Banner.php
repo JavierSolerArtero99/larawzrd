@@ -14,7 +14,6 @@ class Banner extends ComponentInterface implements BannerInterface
     public function adminEdit()
     {
         return Block::make(BannerInterface::COMPONENT_NAME)
-            ->statePath($this->generateUid())
             ->schema([
                 FileUpload::make(self::IMAGE)
                     ->image()
