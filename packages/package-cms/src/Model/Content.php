@@ -4,6 +4,7 @@ namespace Wzrd\Cms\Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 
 class Content extends Model
 {
@@ -26,6 +27,18 @@ class Content extends Model
     protected $casts = [
         'body' => 'json',
     ];
+
+    public function publish()
+    {
+        $this->status = ContentStatusInterface::DRAFT;
+        $this->save();
+    }
+
+    public function unpublish()
+    {
+        $this->status = ContentStatusInterface::DRAFT;
+        $this->save();
+    }
 
 
 }

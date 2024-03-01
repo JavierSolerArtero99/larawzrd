@@ -4,6 +4,8 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content;
 
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Tables\Actions\BulkAction;
+use Illuminate\Database\Eloquent\Collection;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Columns\TextColumn;
@@ -48,7 +50,20 @@ class ContentList extends ListRecords
                 EditAction::make(),
                 DeleteAction::make(),
             ])
-            ->bulkActions([]);
+            ->bulkActions([
+                BulkAction::make('publish')
+                    ->color("success")
+                    ->requiresConfirmation()
+                    ->action(fn (Collection $records) => $records->each->publish()),
+                BulkAction::make('draft')
+                    ->color("warning")
+                    ->requiresConfirmation()
+                    ->action(fn (Collection $records) => $records->each->unpublish()),
+                BulkAction::make('delete')
+                    ->color("danger")
+                    ->requiresConfirmation()
+                    ->action(fn (Collection $records) => $records->each->delete()),
+            ]);
     }
 
 }
