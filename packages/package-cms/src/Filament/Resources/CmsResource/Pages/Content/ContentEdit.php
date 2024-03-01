@@ -30,7 +30,10 @@ class ContentEdit extends EditRecord
             TextInput::make('slug')->required()->helperText('CAUTION!: No input a duplicate value'),
             Select::make('status')
                 ->required()
-                ->options(ContentStatusInterface::VALUES)
+                ->options([
+                    ContentStatusInterface::PUBLISHED => "Published",
+                    ContentStatusInterface::DRAFT => "Draft",
+                ])
                 ->native(false),
             Select::make('layout')
                 ->required()
