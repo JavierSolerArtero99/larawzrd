@@ -6,7 +6,7 @@ interface TextInterface
 {
     const COMPONENT_NAME = "Text";
     const COMPONENT_VALUE = "value";
-    const HTML_TAG = "value";
+    const HTML_TAG = "html_tag";
     const CSS_CLASSES = "css_classes";
 
     const HTML_TAG_OPTIONS = [

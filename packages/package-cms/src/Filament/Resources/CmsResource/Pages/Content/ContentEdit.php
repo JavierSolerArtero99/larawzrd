@@ -13,6 +13,9 @@ use Filament\Forms\Get;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
+use Monolog\Handler\IFTTTHandler;
+use Wzrd\Cms\Components\Banner\Banner;
+use Wzrd\Cms\Components\Text\Text;
 use Wzrd\Cms\Config\ConfigInterface;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\ContentStatusInterface;
@@ -21,7 +24,7 @@ class ContentEdit extends EditRecord
 {
 
     protected static string $resource = ContentResource::class;
-    public ?array $data = ['blocks' => []];
+    public ?array $data = ['blocks' => ""];
 
     public function form(Form $form): Form
     {
@@ -37,6 +40,7 @@ class ContentEdit extends EditRecord
                 ->native(false),
             Textarea::make('meta_desc')->columnSpanFull(),
             Section::make('Content')
+                ->statePath('body')
                 ->label("Slots")
                 ->schema([
                     Repeater::make('slots')
@@ -52,20 +56,17 @@ class ContentEdit extends EditRecord
                                         ->label('Search the component')
                                         ->searchable()
                                         ->options($this->availableComponentNames())
-                                        ->live()
+                                        ->afterStateUpdated(function (?string $state) {
+                                            $this->data['blocks'] = $this->availableComponentClasses()[$state];
+                                        })
                                         ->required(),
                                 ])
-                                ->action(function (array $data, Action $action): void {
-                                    $this->data['blocks'][] = $data['newComponent'];
-                                    $action
-                                        ->getComponent()
-                                        ->getContainer()
-                                        ->getComponent('slotsComponent')
-                                        ->getChildComponentContainer()
-                                        ->fill();
-                                })
                         )
-                        ->schema(fn(Get $get): array => $this->getSelectedComponent())
+                        ->schema(fn(Get $get): array => match ($this->data['blocks'] ?? '') {
+                            Text::class => App::make(Text::class)->adminEdit(),
+                            Banner::class => App::make(Banner::class)->adminEdit(),
+                            default => [],
+                        })
                         ->key('slotsComponent'),
                 ]),
         ]);
@@ -89,14 +90,10 @@ class ContentEdit extends EditRecord
 
     public function getSelectedComponent(): array
     {
-        $blocks = [];
-        foreach ($this->data['blocks'] as $block) {
-            $blocks[] = App::make($this->availableComponentClasses()[$block])->adminEdit();
-        }
-        if (count($this->data['blocks']) > 2) {
-            echo var_dump($blocks);
-            die;
-        }
-        return $blocks;
+        return array_map(
+            //fn($block) => Section::make($block::COMPONENT_NAME)->schema(App::make($block)->adminEdit()),
+            fn($block) => Section::make($block::COMPONENT_NAME),
+            $this->data['blocks'] ?? []
+        );
     }
 }

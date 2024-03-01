@@ -13,6 +13,24 @@ class Banner extends ComponentInterface implements BannerInterface
 {
     public function adminEdit()
     {
+        return [
+            FileUpload::make(self::IMAGE)
+                ->image()
+                ->visible()
+                ->preserveFilenames()
+                ->deletable()
+                ->imageEditor()
+                ->hiddenLabel()
+                ->imageEditor(),
+            TextInput::make(self::TITLE),
+            TextInput::make(self::SUBTITLE),
+            Textarea::make(self::DESCRIPTION),
+            Select::make(self::DISPLAY_KEY)
+                ->options(self::TEXT_DISPLAYS)
+                ->searchable()
+                ->native(false),
+        ];
+        /*
         return Section::make(BannerInterface::COMPONENT_NAME)
             ->statePath($this->generateUid())
             ->collapsible()
@@ -33,5 +51,6 @@ class Banner extends ComponentInterface implements BannerInterface
                     ->searchable()
                     ->native(false),
             ]);
+       */
     }
 }
