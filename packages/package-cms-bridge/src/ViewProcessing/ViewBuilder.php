@@ -10,7 +10,7 @@ class ViewBuilder implements ViewBuilderInterface
 {
     public function build(BlockInterface $block): View
     {
-        return view('WzrdCms::processor.viewProcessor')
+        return view('WzrdCmsBridge::processor.viewProcessor')
         ->with('layout', $block->layout)
         ->with('title', $block->pageTitle)
         ->with('slots', $block->slots);

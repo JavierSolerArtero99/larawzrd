@@ -21,7 +21,6 @@ class WzrdCmsProvider extends PackageServiceProvider
             })
             ->hasConfigFile(['cms-config'])
             ->hasMigrations($this->getMigrations())
-            ->hasRoute('CmsRouteProcessor')
             ->hasViews("WzrdCms");
     }
 

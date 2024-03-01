@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Controllers;
+namespace Wzrd\CmsBridge\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;

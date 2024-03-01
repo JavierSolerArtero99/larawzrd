@@ -18,7 +18,9 @@ class WzrdCmsBridgeProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name(static::$name);
+            ->name(static::$name)
+            ->hasRoute('CmsRouteProcessor')
+            ->hasViews("WzrdCmsBridge");
     }
 
     public function registeringPackage(): void
