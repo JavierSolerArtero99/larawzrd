@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Model\Api;
+namespace Wzrd\CmsBridge\ViewProcessing\Api;
 
 interface BlockInterface
 {

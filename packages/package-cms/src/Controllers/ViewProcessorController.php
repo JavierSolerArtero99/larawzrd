@@ -4,8 +4,8 @@ namespace Wzrd\Cms\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
-use Wzrd\Cms\Model\Api\CmsServiceInterface;
-use Wzrd\Cms\Model\Api\ViewBuilderInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\CmsServiceInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\ViewBuilderInterface;
 
 class ViewProcessorController extends Controller
 {

@@ -1,9 +1,8 @@
 <?php
 
-namespace Wzrd\Cms\Model\Api;
+namespace Wzrd\CmsBridge\ViewProcessing\Api;
 
 use Illuminate\View\View;
-use Wzrd\Cms\Model\Api\BlockInterface;
 
 interface ViewBuilderInterface
 {

@@ -1,10 +1,9 @@
 <?php
 
-namespace Wzrd\Cms\Model\Implement;
+namespace Wzrd\CmsBridge\ViewProcessing\Implement;
 
-use Wzrd\Cms\Model\Api\BlockInterface;
-use Wzrd\Cms\Model\Api\CmsServiceInterface;
-use Wzrd\Cms\Model\Implement\Block;
+use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\CmsServiceInterface;
 
 class CmsService implements CmsServiceInterface
 {

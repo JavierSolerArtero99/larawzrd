@@ -7,14 +7,6 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wzrd\Cms\Config\ConfigInterface;
-use Wzrd\Cms\Model\Api\BlockInterface;
-use Wzrd\Cms\Model\Api\CmsServiceInterface;
-use Wzrd\Cms\Model\Api\ViewBuilderInterface;
-use Wzrd\Cms\Model\Implement\Block;
-use Wzrd\Cms\Model\Implement\CmsService;
-use Wzrd\Cms\Model\Implement\ViewBuilder;
-use Wzrd\Theme\WzrdComponents\Banner\Banner;
-use Wzrd\Theme\WzrdComponents\Text\Text;
 
 class WzrdCmsProvider extends PackageServiceProvider
 {
@@ -37,11 +29,6 @@ class WzrdCmsProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
-        /* Bindings */
-        $this->app->bind(CmsServiceInterface::class, CmsService::class);
-        $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
-        $this->app->bind(BlockInterface::class, Block::class);
-
         /* Bloques laterales del header, cambiar por clases*/
         Config::push(ConfigInterface::HEADER_SIDEBAR_BLOCKS, [
             'login' => 'Login',

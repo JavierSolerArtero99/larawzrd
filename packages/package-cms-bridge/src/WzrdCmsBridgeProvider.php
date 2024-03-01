@@ -4,6 +4,12 @@ namespace Wzrd\CmsBridge;
 
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPackageTools\Package;
+use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\CmsServiceInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\ViewBuilderInterface;
+use Wzrd\CmsBridge\ViewProcessing\Implement\Block;
+use Wzrd\CmsBridge\ViewProcessing\Implement\CmsService;
+use Wzrd\CmsBridge\ViewProcessing\Implement\ViewBuilder;
 
 class WzrdCmsBridgeProvider extends PackageServiceProvider
 {
@@ -13,5 +19,13 @@ class WzrdCmsBridgeProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name);
+    }
+
+    public function registeringPackage(): void
+    {
+        /* Bindings */
+        $this->app->bind(CmsServiceInterface::class, CmsService::class);
+        $this->app->bind(ViewBuilderInterface::class, ViewBuilder::class);
+        $this->app->bind(BlockInterface::class, Block::class);
     }
 }

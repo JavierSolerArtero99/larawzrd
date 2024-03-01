@@ -1,8 +1,8 @@
 <?php
 
-namespace Wzrd\Cms\Model\Implement;
+namespace Wzrd\CmsBridge\ViewProcessing\Implement;
 
-use Wzrd\Cms\Model\Api\BlockInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
 
 class Block implements BlockInterface
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Wzrd\Cms\Model\Implement;
+namespace Wzrd\CmsBridge\ViewProcessing\Implement;
 
 use Illuminate\View\View;
-use Wzrd\Cms\Model\Api\ViewBuilderInterface;
-use Wzrd\Cms\Model\Api\BlockInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
+use Wzrd\CmsBridge\ViewProcessing\Api\ViewBuilderInterface;
 
 class ViewBuilder implements ViewBuilderInterface
 {
