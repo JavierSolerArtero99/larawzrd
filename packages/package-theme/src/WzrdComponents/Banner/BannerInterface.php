@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Components\Banner;
+namespace Wzrd\Theme\WzrdComponents\Banner;
 
 interface BannerInterface
 {

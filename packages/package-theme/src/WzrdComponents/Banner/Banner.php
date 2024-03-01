@@ -1,13 +1,13 @@
 <?php
 
-namespace Wzrd\Cms\Components\Banner;
+namespace Wzrd\Theme\WzrdComponents\Banner;
 
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Wzrd\Cms\Components\Api\ComponentInterface;
+use Wzrd\Cms\WzrdComponents\Api\ComponentInterface;
 
 class Banner extends ComponentInterface implements BannerInterface
 {

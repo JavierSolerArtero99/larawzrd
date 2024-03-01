@@ -2,8 +2,12 @@
 
 namespace Wzrd\Theme;
 
+use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Config\ConfigInterface;
+use Wzrd\Theme\WzrdComponents\Banner\Banner;
+use Wzrd\Theme\WzrdComponents\Text\Text;
 
 class WzrdThemeProvider extends PackageServiceProvider
 {
@@ -17,7 +21,11 @@ class WzrdThemeProvider extends PackageServiceProvider
     }
 
     public function registeringPackage(): void
-    {}
+    {
+        /* WZRD Components */
+        Config::push(ConfigInterface::WZRD_COMPONENTS, Text::class);
+        Config::push(ConfigInterface::WZRD_COMPONENTS, Banner::class);
+    }
 
     protected function getMigrations(): array
     {

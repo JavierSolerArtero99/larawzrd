@@ -1,12 +1,12 @@
 <?php
 
-namespace Wzrd\Cms\Components\Text;
+namespace Wzrd\Theme\WzrdComponents\Text;
 
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
-use Wzrd\Cms\Components\Api\ComponentInterface;
+use Wzrd\Cms\WzrdComponents\Api\ComponentInterface;
 
 class Text extends ComponentInterface implements TextInterface
 {

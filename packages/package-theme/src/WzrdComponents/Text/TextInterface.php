@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Cms\Components\Text;
+namespace Wzrd\Theme\WzrdComponents\Text;
 
 interface TextInterface
 {
