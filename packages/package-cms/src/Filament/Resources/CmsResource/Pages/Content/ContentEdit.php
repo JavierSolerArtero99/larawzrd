@@ -30,17 +30,11 @@ class ContentEdit extends EditRecord
             TextInput::make('slug')->required()->helperText('CAUTION!: No input a duplicate value'),
             Select::make('status')
                 ->required()
-                ->options([
-                    ContentStatusInterface::PUBLISHED => "Published",
-                    ContentStatusInterface::DRAFT => "Draft",
-                ])
+                ->options(ContentStatusInterface::SELECT_VALUES)
                 ->native(false),
             Select::make('layout')
                 ->required()
-                ->options([
-                    LayoutInterface::CONTAINER => "Container",
-                    LayoutInterface::FULL_PAGE => "Full Page",
-                ])
+                ->options(LayoutInterface::SELECT_VALUES)
                 ->native(false),
             Textarea::make('meta_desc')->columnSpanFull(),
             Section::make('Content')
