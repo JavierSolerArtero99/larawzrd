@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\CmsBridge\ViewProcessing\Implement;
+namespace Wzrd\CmsBridge\ViewProcessing;
 
 use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
 

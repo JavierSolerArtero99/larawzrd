@@ -7,9 +7,9 @@ use Spatie\LaravelPackageTools\Package;
 use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
 use Wzrd\CmsBridge\ViewProcessing\Api\CmsServiceInterface;
 use Wzrd\CmsBridge\ViewProcessing\Api\ViewBuilderInterface;
-use Wzrd\CmsBridge\ViewProcessing\Implement\Block;
-use Wzrd\CmsBridge\ViewProcessing\Implement\CmsService;
-use Wzrd\CmsBridge\ViewProcessing\Implement\ViewBuilder;
+use Wzrd\CmsBridge\ViewProcessing\Block;
+use Wzrd\CmsBridge\ViewProcessing\CmsService;
+use Wzrd\CmsBridge\ViewProcessing\ViewBuilder;
 
 class WzrdCmsBridgeProvider extends PackageServiceProvider
 {
