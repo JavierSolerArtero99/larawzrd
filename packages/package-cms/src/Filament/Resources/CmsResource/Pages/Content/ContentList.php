@@ -5,6 +5,7 @@ namespace Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -32,10 +33,9 @@ class ContentList extends ListRecords
             ->columns([
                 ContentStatus::make('status')
                     ->label(""),
-                TextColumn::make('page_title'),
-                TextColumn::make('slug'),
+                TextColumn::make('page_title')->searchable(),
+                TextColumn::make('slug')->searchable(),
             ])
-            ->searchable('slug')
             ->filters([
                 SelectFilter::make('status')
                     ->native(false)
@@ -46,6 +46,7 @@ class ContentList extends ListRecords
             ])
             ->actions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([]);
     }
