@@ -9,7 +9,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Filament\Resources\Pages\EditRecord;
+use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Wzrd\Cms\Config\ConfigInterface;
@@ -17,9 +17,8 @@ use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 use Wzrd\Cms\Model\Theme\LayoutInterface;
 
-class ContentEdit extends EditRecord
+class ContentCreate extends CreateRecord
 {
-
     protected static string $resource = ContentResource::class;
 
     public function form(Form $form): Form
@@ -27,10 +26,13 @@ class ContentEdit extends EditRecord
         return $form->schema([
             TextInput::make('page_title')->required(),
             TextInput::make('meta_title')->required(),
-            TextInput::make('slug')->required()->helperText('CAUTION!: No input a duplicate value'),
+            TextInput::make('slug')->required()->unique(),
             Select::make('status')
                 ->required()
-                ->options(ContentStatusInterface::VALUES)
+                ->options([
+                    ContentStatusInterface::PUBLISHED => "Published",
+                    ContentStatusInterface::DRAFT => "Draft",
+                ])
                 ->native(false),
             Select::make('layout')
                 ->required()
@@ -68,5 +70,4 @@ class ContentEdit extends EditRecord
             Config::get(ConfigInterface::WZRD_COMPONENTS)
         );
     }
-
 }

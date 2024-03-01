@@ -3,6 +3,7 @@
 namespace Wzrd\Cms\Filament\Resources\CmsResource;
 
 use Filament\Resources\Resource;
+use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content\ContentCreate;
 use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content\ContentEdit;
 use Wzrd\Cms\Filament\Resources\CmsResource\Pages\Content\ContentList;
 use Wzrd\Cms\Model\Content;
@@ -23,6 +24,7 @@ class ContentResource extends Resource
         return [
             'index' => ContentList::route('/'),
             'edit' => ContentEdit::route('/{record}/edit'),
+            'create' => ContentCreate::route('/create'),
         ];
     }
 }
