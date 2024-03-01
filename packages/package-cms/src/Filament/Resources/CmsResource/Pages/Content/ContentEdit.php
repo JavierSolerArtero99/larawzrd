@@ -10,7 +10,6 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
-use Livewire\Component;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
@@ -22,10 +21,7 @@ class ContentEdit extends EditRecord
 {
 
     protected static string $resource = ContentResource::class;
-    protected static ?int $selectedBlock = 0;
-    public ?array $data = [
-        'selectedBlock' => 0
-    ];
+    public ?array $data = ['blocks' => []];
 
     public function form(Form $form): Form
     {
@@ -60,17 +56,16 @@ class ContentEdit extends EditRecord
                                         ->required(),
                                 ])
                                 ->action(function (array $data, Action $action): void {
-                                    $this->data['selectedBlock'] = $data['newComponent'];
+                                    $this->data['blocks'][] = $data['newComponent'];
                                     $action
                                         ->getComponent()
                                         ->getContainer()
                                         ->getComponent('slotsComponent')
-                                        ->viewData(['selectedBlock' => 1])
                                         ->getChildComponentContainer()
                                         ->fill();
                                 })
                         )
-                        ->schema(fn (Get $get): array => $this->getSelectedComponent($get))
+                        ->schema(fn(Get $get): array => $this->getSelectedComponent())
                         ->key('slotsComponent'),
                 ]),
         ]);
@@ -92,8 +87,16 @@ class ContentEdit extends EditRecord
         );
     }
 
-    public function getSelectedComponent(Get $get): array
+    public function getSelectedComponent(): array
     {
-        return [App::make($this->availableComponentClasses()[$this->data['selectedBlock']])->adminEdit()];
+        $blocks = [];
+        foreach ($this->data['blocks'] as $block) {
+            $blocks[] = App::make($this->availableComponentClasses()[$block])->adminEdit();
+        }
+        if (count($this->data['blocks']) > 2) {
+            echo var_dump($blocks);
+            die;
+        }
+        return $blocks;
     }
 }

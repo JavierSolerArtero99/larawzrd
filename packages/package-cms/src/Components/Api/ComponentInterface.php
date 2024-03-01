@@ -6,7 +6,7 @@ abstract class ComponentInterface
 {
     public function generateUid()
     {
-        return uniqid('text_');
+        return uniqid();
     }
 
     /* TIPAR ESTA FUNCION */
