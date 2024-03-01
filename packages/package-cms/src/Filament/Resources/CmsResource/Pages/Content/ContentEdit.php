@@ -24,7 +24,7 @@ class ContentEdit extends EditRecord
 {
 
     protected static string $resource = ContentResource::class;
-    public ?array $data = ['blocks' => ""];
+    public ?array $data = ['blocks' => []];
 
     public function form(Form $form): Form
     {
@@ -57,16 +57,12 @@ class ContentEdit extends EditRecord
                                         ->searchable()
                                         ->options($this->availableComponentNames())
                                         ->afterStateUpdated(function (?string $state) {
-                                            $this->data['blocks'] = $this->availableComponentClasses()[$state];
+                                            $this->data['blocks'][] = $this->availableComponentClasses()[$state];
                                         })
                                         ->required(),
                                 ])
                         )
-                        ->schema(fn(Get $get): array => match ($this->data['blocks'] ?? '') {
-                            Text::class => App::make(Text::class)->adminEdit(),
-                            Banner::class => App::make(Banner::class)->adminEdit(),
-                            default => [],
-                        })
+                        ->schema(App::make(Text::class)->adminEdit())
                         ->key('slotsComponent'),
                 ]),
         ]);
