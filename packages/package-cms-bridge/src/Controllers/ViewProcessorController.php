@@ -18,9 +18,7 @@ class ViewProcessorController extends Controller
 
     public function render(string $slug = null): View
     {
-        $blocks = $this->cmsService->getPageBlocks($slug ?? "home");
-
-        // controlar si existe el block sino 404
+        $blocks = $this->cmsService->getPageBlocks($slug ?? "/");
 
         return $this->viewBuilder->build($blocks);
     }
