@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\CmsBridge\ViewProcessing\Api;
+namespace Wzrd\CmsBridge\Services\Api;
 
 interface CmsServiceInterface
 {
