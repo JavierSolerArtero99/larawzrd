@@ -2,6 +2,7 @@
 
 namespace Wzrd\CmsBridge\ViewProcessing;
 
+use Wzrd\Cms\Model\Content;
 use Wzrd\CmsBridge\ViewProcessing\Api\BlockInterface;
 use Wzrd\CmsBridge\ViewProcessing\Api\CmsServiceInterface;
 
@@ -20,6 +21,11 @@ class CmsService implements CmsServiceInterface
             ],
         ],
     ];
+
+    public function getContentBySlug(string $slug): ?BlockInterface
+    {
+        return Content::where('slug', "/")->first();
+    }
 
     public function getPageBlocks(string $slug): ?BlockInterface
     {

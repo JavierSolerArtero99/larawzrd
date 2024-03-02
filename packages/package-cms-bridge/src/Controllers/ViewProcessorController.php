@@ -18,8 +18,8 @@ class ViewProcessorController extends Controller
 
     public function render(string $slug = null): View
     {
-        $blocks = $this->cmsService->getPageBlocks($slug ?? "/");
+        $content = $this->cmsService->getContentBySlug($slug ?? "/");
 
-        return $this->viewBuilder->build($blocks);
+        return $this->viewBuilder->build($content);
     }
 }
