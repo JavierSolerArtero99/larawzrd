@@ -6,7 +6,10 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Wzrd\CalandraTexDomain\Filament\CtCustomer\Dashboard\CtCustomerDashboard;
 use Wzrd\CalandraTexDomain\Filament\CtCustomer\Resources\CtCustomerResource;
-use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\NewOrderWidget;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\CtData;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\CtOrderHistory;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\LinkWidget;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\NewCtOrder;
 
 class CtCustomerPlugin implements Plugin
 {
@@ -28,7 +31,10 @@ class CtCustomerPlugin implements Plugin
                 CtCustomerDashboard::class
             ])
             ->widgets([
-                NewOrderWidget::class
+                LinkWidget::class,
+                NewCtOrder::class,
+                CtOrderHistory::class,
+                CtData::class,
             ])
             ->resources([]);
     }
