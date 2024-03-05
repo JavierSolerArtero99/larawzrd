@@ -6,6 +6,7 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Wzrd\CalandraTexDomain\Filament\CtCustomer\Dashboard\CtCustomerDashboard;
 use Wzrd\CalandraTexDomain\Filament\CtCustomer\Resources\CtCustomerResource;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets\NewOrderWidget;
 
 class CtCustomerPlugin implements Plugin
 {
@@ -25,6 +26,9 @@ class CtCustomerPlugin implements Plugin
         $panel
             ->pages([
                 CtCustomerDashboard::class
+            ])
+            ->widgets([
+                NewOrderWidget::class
             ])
             ->resources([]);
     }

@@ -14,6 +14,7 @@ class CalandraTexDomainProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
+            ->hasViews("CtDomain")
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishMigrations()
