@@ -18,6 +18,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Wzrd\CalandraTexDomain\Filament\CtCustomer\Dashboard\CtCustomerDashboard;
+use Wzrd\CalandraTexDomain\Filament\Plugins\CtCustomerPlugin;
 use Wzrd\Cms\WzrdCmsPlugin;
 use Wzrd\Customer\Filament\Plugins\CustomersPlugin;
 
@@ -61,7 +63,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentLoginLogs::make(),
                 CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
-                WzrdCmsPlugin::make(),
+                CtCustomerPlugin::make(),
             ]);
     }
 }

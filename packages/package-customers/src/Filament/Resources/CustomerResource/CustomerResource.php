@@ -15,9 +15,7 @@ use Wzrd\Customer\Model\CustomerAttributes;
 class CustomerResource extends Resource
 {
     protected static ?string $model = Customer::class;
-
     protected static ?int $navigationSort = 10;
-
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function getNavigationGroup(): ?string
