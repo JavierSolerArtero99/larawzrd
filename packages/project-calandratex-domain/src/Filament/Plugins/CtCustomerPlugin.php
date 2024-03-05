@@ -26,8 +26,7 @@ class CtCustomerPlugin implements Plugin
             ->pages([
                 CtCustomerDashboard::class
             ])
-            ->resources([
-            ]);
+            ->resources([]);
     }
 
     public function boot(Panel $panel): void

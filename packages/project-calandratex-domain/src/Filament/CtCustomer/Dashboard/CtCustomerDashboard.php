@@ -10,5 +10,13 @@ class CtCustomerDashboard extends Dashboard
     protected static ?int $navigationSort = 30;
     protected static ?string $navigationGroup = "CalandraTex";
     protected static ?string $navigationLabel = "CalandraTex Customer";
+    protected static ?string $title = "Bienvenido TEXTILES FERRE SANZ, S.L.";
+
+    public function getWidgets(): array
+    {
+        return [
+
+        ];
+    }
 
 }
