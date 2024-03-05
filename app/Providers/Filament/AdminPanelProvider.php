@@ -61,6 +61,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentLoginLogs::make(),
                 CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
+                WzrdCmsPlugin::make(),
             ]);
     }
 }
