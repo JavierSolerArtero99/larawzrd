@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "837386c91ce8c81ddd40d68129652df0",
+    "content-hash": "a89d43365ea241a000dd12dd4c9e9abd",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -8005,6 +8005,47 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "wzrd/project-calandratex-domain",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/project-calandratex-domain",
+                "reference": "b8852bf82b746d37ab638e32c37e1716b1f83797"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\CalandraTexDomain\\CalandraTexDomainProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\CalandraTexDomain\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -10445,6 +10486,7 @@
     "stability-flags": {
         "cursosdesarrolloweb/filament-login-logs-plugin": 20,
         "wzrd/package-cms": 20,
+        "wzrd/package-cms-bridge": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20
     },
