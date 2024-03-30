@@ -6,6 +6,7 @@ use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Wzrd\HorusDomain\Filament\HorusInteraction\Resources\HorusInteraction;
+use Wzrd\HorusDomain\Filament\HorusInteraction\Widgets\PlatformChart;
 
 class ListInteractions extends ListRecords
 {
@@ -27,4 +28,12 @@ class ListInteractions extends ListRecords
             TextColumn::make('ydpi'),
         ]);
     }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            PlatformChart::class
+        ];
+    }
+
 }

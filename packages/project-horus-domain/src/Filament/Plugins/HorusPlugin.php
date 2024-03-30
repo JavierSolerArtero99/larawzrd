@@ -4,6 +4,7 @@ namespace Wzrd\HorusDomain\Filament\Plugins;
 
 use Filament\Contracts\Plugin;
 use Wzrd\HorusDomain\Filament\HorusInteraction\Resources\HorusInteraction;
+use Wzrd\HorusDomain\Filament\HorusInteraction\Widgets\PlatformChart;
 
 class HorusPlugin implements Plugin
 {
@@ -12,7 +13,7 @@ class HorusPlugin implements Plugin
     {
         return app(static::class);
     }
-    
+
     public function getId(): string
     {
         return 'wzrd-horus';
@@ -22,7 +23,8 @@ class HorusPlugin implements Plugin
     {
         $panel->resources([
             HorusInteraction::class,
-        ]);
+        ])
+        ->widgets([PlatformChart::class]);
     }
 
     public function boot(\Filament\Panel $panel): void
