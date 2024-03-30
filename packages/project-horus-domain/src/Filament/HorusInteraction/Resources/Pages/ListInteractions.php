@@ -15,6 +15,16 @@ class ListInteractions extends ListRecords
     {
         return $table->columns([
             TextColumn::make('api_key')->searchable(),
+            TextColumn::make('device_id'),
+            TextColumn::make('device_brand'),
+            TextColumn::make('device_model'),
+            TextColumn::make('device_sdk'),
+            TextColumn::make('path'),
+            TextColumn::make('platform'),
+            TextColumn::make('screen_width'),
+            TextColumn::make('screen_height'),
+            TextColumn::make('xdpi'),
+            TextColumn::make('ydpi'),
         ]);
     }
 }
