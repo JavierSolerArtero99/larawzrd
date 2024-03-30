@@ -22,6 +22,7 @@ use Wzrd\CalandraTexDomain\Filament\CtCustomer\Dashboard\CtCustomerDashboard;
 use Wzrd\CalandraTexDomain\Filament\Plugins\CtCustomerPlugin;
 use Wzrd\Cms\WzrdCmsPlugin;
 use Wzrd\Customer\Filament\Plugins\CustomersPlugin;
+use Wzrd\HorusDomain\Filament\Plugins\HorusPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -63,7 +64,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentLoginLogs::make(),
                 CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
-                CtCustomerPlugin::make(),
+                HorusPlugin::make(),
             ]);
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a89d43365ea241a000dd12dd4c9e9abd",
+    "content-hash": "a22ab07635201afec7aa141d8930391a",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -8046,6 +8046,47 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "wzrd/project-horus-domain",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/project-horus-domain",
+                "reference": "21ad076ed46eacd12dc5dd6f1cdf08c7f19c51df"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\HorusDomain\\HorusDomainProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\HorusDomain\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -10488,7 +10529,8 @@
         "wzrd/package-cms": 20,
         "wzrd/package-cms-bridge": 20,
         "wzrd/package-customers": 20,
-        "wzrd/package-theme": 20
+        "wzrd/package-theme": 20,
+        "wzrd/project-calandratex-domain": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
