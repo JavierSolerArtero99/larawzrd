@@ -32,6 +32,7 @@ class HorusPanelProvider extends PanelProvider
             ])
             ->authGuard('horus_customers')
             ->passwordReset()
+            ->maxContentWidth('full')
             ->authPasswordBroker('horus_customers')
             ->discoverResources(in: app_path('Filament/Horus/Resources'), for: 'App\\Filament\\Horus\\Resources')
             ->discoverPages(in: app_path('Filament/Horus/Pages'), for: 'App\\Filament\\Horus\\Pages')
