@@ -11,7 +11,6 @@ return new class extends Migration {
         Schema::create('horus_customers', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('slug')->unique();
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
@@ -21,6 +20,8 @@ return new class extends Migration {
         });
         Schema::create('horus_apps', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
             $table->unsignedBigInteger('horus_customer');
             $table->foreign('horus_customer')->references('id')->on('horus_customers')->onUpdate('cascade')->onDelete('cascade');
         });
