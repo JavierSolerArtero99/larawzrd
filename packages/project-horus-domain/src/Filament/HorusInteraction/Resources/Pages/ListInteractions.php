@@ -32,7 +32,7 @@ class ListInteractions extends ListRecords
     protected function getHeaderWidgets(): array
     {
         return [
-            PlatformChart::class
+            // PlatformChart::class
         ];
     }
 
