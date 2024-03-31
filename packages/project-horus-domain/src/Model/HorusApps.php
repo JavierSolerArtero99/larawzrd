@@ -9,12 +9,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class HorusApps extends Model
 {
     protected $table = "horus_apps";
+    public $timestamps = false;
 
     protected $fillable = [
         'name',
         'slug',
         'api_key',
         'paths',
+        'horus_customer',
     ];
 
     public function user(): BelongsTo

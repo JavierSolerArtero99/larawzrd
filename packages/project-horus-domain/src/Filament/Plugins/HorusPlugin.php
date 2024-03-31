@@ -3,6 +3,7 @@
 namespace Wzrd\HorusDomain\Filament\Plugins;
 
 use Filament\Contracts\Plugin;
+use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
 use Wzrd\HorusDomain\Filament\HorusInteraction\Resources\HorusInteractionResource;
 use Wzrd\HorusDomain\Filament\HorusInteraction\Widgets\PlatformChart;
 
@@ -23,6 +24,7 @@ class HorusPlugin implements Plugin
     {
         $panel->resources([
             HorusInteractionResource::class,
+            HorusAppsResource::class,
         ])
         ->widgets([
             //PlatformChart::class

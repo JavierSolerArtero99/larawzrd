@@ -11,7 +11,6 @@ class HorusInteractionResource extends Resource
     protected static ?string $model = HorusInteractionModel::class;
     protected static ?int $navigationSort = 50;
     protected static ?string $navigationIcon = 'heroicon-o-eye';
-    protected static ?string $tenantOwnershipRelationshipName = "app";
 
     public static function getNavigationGroup(): ?string
     {
