@@ -3,6 +3,7 @@
 namespace Wzrd\HorusDomain\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class HorusInteraction extends Model
 {
@@ -22,4 +23,10 @@ class HorusInteraction extends Model
         'ydpi',
         'timestamp',
     ];
+
+    public function app(): BelongsTo
+    {
+        return $this->belongsTo(HorusApps::class, 'id', 'app');
+    }
+
 }
