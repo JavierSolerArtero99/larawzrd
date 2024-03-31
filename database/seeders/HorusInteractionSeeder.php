@@ -25,6 +25,7 @@ class HorusInteractionSeeder extends Seeder
                 'screen_height' => rand(600, 1080),
                 'xdpi' => rand(200, 500),
                 'ydpi' => rand(200, 500),
+                'app' => rand(1, 3),
                 'timestamp' => now()->toDateTimeString()];
             DB::table('horus_interaction')->insert($data);
         }
@@ -34,7 +35,6 @@ class HorusInteractionSeeder extends Seeder
     private function randomApiKey()
     {
         $apiKey = [
-            'rtyuikambghjikl',
             'nnasdlaksdfoiña',
             'bnmsjjkjanbvhjo',
             'mmnbcoslakkdldl'];

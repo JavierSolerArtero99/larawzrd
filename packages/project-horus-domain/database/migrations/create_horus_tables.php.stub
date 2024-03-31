@@ -22,8 +22,31 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('api_key');
+            $table->json('paths');
             $table->unsignedBigInteger('horus_customer');
             $table->foreign('horus_customer')->references('id')->on('horus_customers')->onUpdate('cascade')->onDelete('cascade');
+        });
+        Schema::create('horus_interaction', function (Blueprint $table) {
+            $table->id();
+            $table->string('api_key')->nullable();
+            // DEVICE
+            $table->string('device_id')->nullable();
+            $table->string('device_brand')->nullable();
+            $table->string('device_model')->nullable();
+            $table->string('device_sdk');
+            // METRICS
+            $table->string('path');
+            $table->enum('platform', InteractionInterface::PLATFORMS)->nullable();
+            $table->float('screen_width');
+            $table->float('screen_height');
+            $table->float('xdpi');
+            $table->float('ydpi');
+            $table->timestamp('timestamp');
+
+            $table->unsignedBigInteger('app');
+            $table->foreign('app')->references('id')->on('horus_apps')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -34,5 +57,6 @@ return new class extends Migration {
     {
         Schema::dropIfExists('horus_customers');
         Schema::dropIfExists('horus_apps');
+        Schema::dropIfExists('horus_interaction');
     }
 };

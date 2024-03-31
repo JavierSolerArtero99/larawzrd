@@ -12,6 +12,8 @@ class HorusInteraction extends Resource
     protected static ?int $navigationSort = 50;
     protected static ?string $navigationIcon = 'heroicon-o-eye';
 
+    protected static ?string $tenantOwnershipRelationshipName = "owner";
+
     public static function getNavigationGroup(): ?string
     {
         return 'Horus';

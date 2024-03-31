@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\HorusDomain\Model\Tenancy;
+namespace Wzrd\HorusDomain\Model;
 
 use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Collection;
-use Wzrd\HorusDomain\Model\HorusApps;
 
 class HorusCustomers extends Authenticatable implements HasTenants
 {

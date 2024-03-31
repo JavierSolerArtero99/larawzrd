@@ -32,8 +32,7 @@ class HorusDomainProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_horus_interaction',
-            'create_horus_table',
+            'create_horus_tables',
         ];
     }
 }

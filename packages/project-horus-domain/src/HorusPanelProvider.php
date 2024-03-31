@@ -17,6 +17,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Wzrd\HorusDomain\Filament\Plugins\HorusPlugin;
 use Wzrd\HorusDomain\Model\HorusApps;
 
 class HorusPanelProvider extends PanelProvider
@@ -58,6 +59,7 @@ class HorusPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->tenant(HorusApps::class, slugAttribute: 'slug', ownershipRelationship: 'owner');
+            ->tenant(HorusApps::class, slugAttribute: 'slug', ownershipRelationship: 'horus_apps_interaction')
+            ->plugins([HorusPlugin::make()]);
     }
 }
