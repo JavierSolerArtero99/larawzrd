@@ -59,7 +59,6 @@ class HorusPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->tenant(HorusApps::class, 'slug', 'owner')
             ->plugins([HorusPlugin::make()]);
     }
 }

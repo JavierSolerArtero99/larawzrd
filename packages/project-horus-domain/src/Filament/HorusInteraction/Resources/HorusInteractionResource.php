@@ -6,7 +6,7 @@ use Wzrd\HorusDomain\Model\HorusInteraction as HorusInteractionModel;
 use Filament\Resources\Resource;
 use Wzrd\HorusDomain\Filament\HorusInteraction\Resources\Pages\ListInteractions;
 
-class HorusInteraction extends Resource
+class HorusInteractionResource extends Resource
 {
     protected static ?string $model = HorusInteractionModel::class;
     protected static ?int $navigationSort = 50;

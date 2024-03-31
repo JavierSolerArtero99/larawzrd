@@ -2,7 +2,6 @@
 
 namespace Wzrd\HorusDomain\Model;
 
-use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -10,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Collection;
 
-class HorusCustomers extends Authenticatable implements HasTenants
+class HorusCustomers extends Authenticatable
 {
     use Notifiable;
 
@@ -33,15 +32,5 @@ class HorusCustomers extends Authenticatable implements HasTenants
     public function apps(): HasMany
     {
         return $this->hasMany(HorusApps::class, 'horus_customer');
-    }
-
-    public function getTenants(Panel $panel): array|Collection
-    {
-        return $this->apps;
-    }
-
-    public function canAccessTenant(Model $tenant): bool
-    {
-        return $this->apps->contains($tenant);
     }
 }
