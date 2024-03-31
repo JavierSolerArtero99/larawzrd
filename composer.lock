@@ -8053,7 +8053,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/project-horus-domain",
-                "reference": "21ad076ed46eacd12dc5dd6f1cdf08c7f19c51df"
+                "reference": "d9ecc36f0bdea74cbd78d01861b0df55449e397b"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -8066,7 +8066,8 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Wzrd\\HorusDomain\\HorusDomainProvider"
+                        "Wzrd\\HorusDomain\\HorusDomainProvider",
+                        "Wzrd\\HorusDomain\\HorusPanelProvider"
                     ]
                 }
             },
@@ -10530,6 +10531,7 @@
         "wzrd/package-cms-bridge": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20,
+        "wzrd/project-calandratex-domain": 20,
         "wzrd/project-horus-domain": 20
     },
     "prefer-stable": true,

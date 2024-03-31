@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers\Filament;
+namespace Wzrd\HorusDomain;
 
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -24,10 +24,14 @@ class HorusPanelProvider extends PanelProvider
     {
         return $panel
             ->id('horus')
-            ->path('horus')
+            ->path('horus_customers')
+            ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Cyan,
             ])
+            ->authGuard('horus_customers')
+            ->passwordReset()
+            ->authPasswordBroker('horus_customers')
             ->discoverResources(in: app_path('Filament/Horus/Resources'), for: 'App\\Filament\\Horus\\Resources')
             ->discoverPages(in: app_path('Filament/Horus/Pages'), for: 'App\\Filament\\Horus\\Pages')
             ->pages([

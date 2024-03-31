@@ -24,7 +24,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wzrd\\HorusDomain\\HorusDomainProvider"
+                "Wzrd\\HorusDomain\\HorusDomainProvider",
+                "Wzrd\\HorusDomain\\HorusPanelProvider"
             ]
         }
     }

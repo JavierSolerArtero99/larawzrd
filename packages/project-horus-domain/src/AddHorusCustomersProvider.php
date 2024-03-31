@@ -4,6 +4,7 @@ namespace Wzrd\HorusDomain;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
+use Wzrd\HorusDomain\Model\Tenancy\HorusCustomers;
 
 class AddHorusCustomersProvider extends ServiceProvider
 {
@@ -17,7 +18,12 @@ class AddHorusCustomersProvider extends ServiceProvider
 
         Config::set('auth.providers.horus_customers', [
             'driver' => 'eloquent',
-            'model' => \Wzrd\Customer\Model\Customer::class,
+            'model' => HorusCustomers::class,
+        ]);
+
+        Config::set('auth.passwords.horus_customers', [
+            'driver' => 'eloquent',
+            'model' => HorusCustomers::class,
         ]);
     }
 
