@@ -24,6 +24,11 @@ class HorusDomainProvider extends PackageServiceProvider
             ->hasMigrations($this->getMigrations());
     }
 
+    public function registeringPackage(): void
+    {
+        $this->app->register(AddHorusCustomersProvider::class);
+    }
+
     protected function getMigrations(): array
     {
         return [
