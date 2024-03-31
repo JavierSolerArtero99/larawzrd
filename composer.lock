@@ -10530,7 +10530,6 @@
         "wzrd/package-cms-bridge": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20,
-        "wzrd/project-calandratex-domain": 20,
         "wzrd/project-horus-domain": 20
     },
     "prefer-stable": true,
