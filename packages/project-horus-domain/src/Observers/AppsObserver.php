@@ -3,16 +3,13 @@
 namespace Wzrd\HorusDomain\Observers;
 
 use Wzrd\HorusDomain\Model\HorusApps;
-use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
-class AppsObserver extends EventServiceProvider
+class AppsObserver
 {
-    public function created(HorusApps $app): void
+    public function saving(HorusApps $app): void
     {
         if (auth()->check()) {
-            echo var_dump($app);
-            die();
-            $app->user()->associate(auth()->user());
+            $app->horus_customer = auth()->user()->getAuthIdentifier();
         }
     }
 }
