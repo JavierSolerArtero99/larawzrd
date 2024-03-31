@@ -28,6 +28,7 @@ class HorusDomainProvider extends PackageServiceProvider
     {
         return [
             'create_horus_interaction',
+            'create_horus_table',
         ];
     }
 }
