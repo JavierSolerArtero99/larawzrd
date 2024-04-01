@@ -13,7 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
-use Wzrd\HorusDomain\Filament\HorusApps\Widgets\TotalAppsCount;
+use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
 
 class ListApps extends ListRecords
 {
@@ -22,7 +22,7 @@ class ListApps extends ListRecords
     protected function getHeaderWidgets(): array
     {
         return [
-            TotalAppsCount::class
+            ListAppsWidgets::class,
         ];
     }
 
