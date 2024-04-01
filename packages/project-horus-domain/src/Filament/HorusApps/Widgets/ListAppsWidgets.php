@@ -14,7 +14,7 @@ class ListAppsWidgets extends BaseWidget
         return [
             Stat::make('Total Apps', HorusApps::count())
                 ->icon('heroicon-o-cube-transparent'),
-            Stat::make('Total Interactions', HorusInteraction::count())
+            Stat::make('Global Interactions', HorusInteraction::count())
                 ->icon('heroicon-o-finger-print'),
         ];
     }

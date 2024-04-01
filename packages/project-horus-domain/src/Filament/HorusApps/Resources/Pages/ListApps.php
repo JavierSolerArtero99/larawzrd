@@ -18,6 +18,12 @@ use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
 class ListApps extends ListRecords
 {
     protected static string $resource = HorusAppsResource::class;
+    protected static ?string $title = "Apps";
+
+    public function getBreadcrumbs(): array
+    {
+        return [];
+    }
 
     protected function getHeaderWidgets(): array
     {

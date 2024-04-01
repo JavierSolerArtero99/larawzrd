@@ -11,6 +11,8 @@ class HorusAppsResource extends Resource
 {
     protected static ?string $model = HorusApps::class;
     protected static ?int $navigationSort = 10;
+    protected static ?string $navigationLabel = "Apps";
+    protected static ?string $breadcrumb = "Apps";
     protected static ?string $navigationIcon = 'heroicon-o-cube-transparent';
 
     public static function getPages(): array
