@@ -5,12 +5,14 @@ namespace Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextInputColumn;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
 use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
+use Wzrd\HorusDomain\Model\HorusApps;
 
 class ListApps extends ListRecords
 {
@@ -45,7 +47,8 @@ class ListApps extends ListRecords
             ->columns([
                 ImageColumn::make('logo'),
                 TextColumn::make('name'),
-                TextColumn::make('slug'),
+                TextColumn::make('interactions_count')->counts('interactions')->color("success")->badge(),
+                TextColumn::make('api_key')->badge()->disabled()->copyable(),
             ])
             ->actions([
                 EditAction::make(),

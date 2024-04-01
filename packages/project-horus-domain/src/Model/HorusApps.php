@@ -44,6 +44,6 @@ class HorusApps extends Model
 
     public function interactions(): HasMany
     {
-        return $this->hasMany(HorusInteraction::class);
+        return $this->hasMany(HorusInteraction::class, 'app');
     }
 }
