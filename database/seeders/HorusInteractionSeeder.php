@@ -35,9 +35,10 @@ class HorusInteractionSeeder extends Seeder
     private function randomApiKey()
     {
         $apiKey = [
-            'nnasdlaksdfoiña',
-            'bnmsjjkjanbvhjo',
-            'mmnbcoslakkdldl'];
+            'nnasdlaksdfoiña',  // dicefm
+            'bnmsjjkjanbvhjo',  // productive.io
+            'mmnbcoslakkdldl'   // ?
+        ];
         return $apiKey[array_rand($apiKey)];
     }
 

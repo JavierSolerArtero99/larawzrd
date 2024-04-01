@@ -21,6 +21,7 @@ return new class extends Migration {
         Schema::create('horus_apps', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('logo');
             $table->string('slug')->unique();
             $table->string('api_key');
             $table->json('paths');

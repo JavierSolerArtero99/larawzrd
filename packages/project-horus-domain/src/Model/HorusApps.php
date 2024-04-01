@@ -18,6 +18,7 @@ class HorusApps extends Model
     protected $fillable = [
         'name',
         'slug',
+        'logo',
         'api_key',
         'paths',
         'horus_customer',

@@ -3,12 +3,16 @@
 namespace Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages;
 
 use Filament\Actions\CreateAction;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\EditAction;
 
 class ListApps extends ListRecords
 {
@@ -17,8 +21,9 @@ class ListApps extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make('create-content')
-                ->label(__("Create Content"))
+            CreateAction::make('create-app')
+                ->label(__("Create New App"))
+                ->icon('heroicon-o-cube-transparent')
                 ->color("success"),
         ];
     }
@@ -28,6 +33,15 @@ class ListApps extends ListRecords
         return $form->schema([
             TextInput::make('slug')->required(),
             TextInput::make('name')->required(),
+            FileUpload::make('logo')
+                // añadir restriccion de svg
+                ->image()
+                ->visible()
+                ->preserveFilenames()
+                ->deletable()
+                ->imageEditor()
+                ->hiddenLabel()
+                ->imageEditor(),
             TextInput::make('api_key')->required(),
             TextInput::make('paths')->required(),
         ]);
@@ -35,10 +49,16 @@ class ListApps extends ListRecords
 
     public function table(Table $table): Table
     {
-        return $table->columns([
-            TextColumn::make('name'),
-            TextColumn::make('slug'),
-        ]);
+        return $table
+            ->columns([
+                ImageColumn::make('logo'),
+                TextColumn::make('name'),
+                TextColumn::make('slug'),
+            ])
+            ->actions([
+                EditAction::make(),
+                DeleteAction::make(),
+            ]);
     }
 
 }
