@@ -2,6 +2,7 @@
 
 namespace Wzrd\HorusDomain\Filament\HorusApps\Resources;
 
+use Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages\CreateApp;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages\ListApps;
 use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
 use Wzrd\HorusDomain\Model\HorusApps;
@@ -19,6 +20,7 @@ class HorusAppsResource extends Resource
     {
         return [
             'index' => ListApps::route('/'),
+            'create' => CreateApp::route('/create'),
         ];
     }
 

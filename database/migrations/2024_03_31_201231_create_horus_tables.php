@@ -22,8 +22,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('logo');
-            $table->string('slug')->unique();
-            $table->string('api_key');
+            $table->string('api_key')->unique();
             $table->json('paths');
             $table->unsignedBigInteger('horus_customer');
             $table->foreign('horus_customer')->references('id')->on('horus_customers')->onUpdate('cascade')->onDelete('cascade');

@@ -24,6 +24,10 @@ class HorusApps extends Model
         'horus_customer',
     ];
 
+    protected $casts = [
+        'paths' => 'json',
+    ];
+
     protected static function booted(): void
     {
         static::addGlobalScope('own_apps_restriction', function (Builder $query) {

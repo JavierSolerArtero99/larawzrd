@@ -3,9 +3,6 @@
 namespace Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages;
 
 use Filament\Actions\CreateAction;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
@@ -40,25 +37,6 @@ class ListApps extends ListRecords
                 ->icon('heroicon-o-cube-transparent')
                 ->color("success"),
         ];
-    }
-
-    public function form(Form $form): Form
-    {
-        return $form->schema([
-            TextInput::make('slug')->required(),
-            TextInput::make('name')->required(),
-            FileUpload::make('logo')
-                // añadir restriccion de svg
-                ->image()
-                ->visible()
-                ->preserveFilenames()
-                ->deletable()
-                ->imageEditor()
-                ->hiddenLabel()
-                ->imageEditor(),
-            TextInput::make('api_key')->required(),
-            TextInput::make('paths')->required(),
-        ]);
     }
 
     public function table(Table $table): Table
