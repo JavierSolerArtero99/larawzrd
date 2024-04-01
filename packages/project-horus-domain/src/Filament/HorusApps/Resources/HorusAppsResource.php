@@ -3,6 +3,7 @@
 namespace Wzrd\HorusDomain\Filament\HorusApps\Resources;
 
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages\ListApps;
+use Wzrd\HorusDomain\Filament\HorusApps\Widgets\TotalAppsCount;
 use Wzrd\HorusDomain\Model\HorusApps;
 use Filament\Resources\Resource;
 
@@ -16,6 +17,13 @@ class HorusAppsResource extends Resource
     {
         return [
             'index' => ListApps::route('/'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            TotalAppsCount::class
         ];
     }
 }

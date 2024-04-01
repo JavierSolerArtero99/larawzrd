@@ -13,10 +13,18 @@ use Filament\Tables\Columns\TextColumn;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
+use Wzrd\HorusDomain\Filament\HorusApps\Widgets\TotalAppsCount;
 
 class ListApps extends ListRecords
 {
     protected static string $resource = HorusAppsResource::class;
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            TotalAppsCount::class
+        ];
+    }
 
     protected function getHeaderActions(): array
     {
