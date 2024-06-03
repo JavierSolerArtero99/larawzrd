@@ -22,8 +22,6 @@ class CtCustomerPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel
-            ->widgets([
-            ])
             ->resources([
                 CtOrderResource::class
             ]);
