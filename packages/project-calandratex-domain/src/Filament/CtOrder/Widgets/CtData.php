@@ -1,9 +1,12 @@
 <?php
 
-namespace Wzrd\CalandraTexDomain\Filament\CtCustomer\Widgets;
+namespace Wzrd\CalandraTexDomain\Filament\CtOrder\Widgets;
 
-class CtData extends LinkWidget
+use Filament\Widgets\Widget;
+
+class CtData extends Widget
 {
+    protected static string $view = "CtDomain::admin.widgets.new-order";
     protected string $linkIcon = "heroicon-o-user";
     protected string $linkColor = 'color: #5800FF';
     protected string $widgetLink = "/admin/";
