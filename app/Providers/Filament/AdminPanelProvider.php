@@ -65,7 +65,6 @@ class AdminPanelProvider extends PanelProvider
                 CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
                 CtCustomerPlugin::make(),
-                HorusPlugin::make(),
             ]);
     }
 }
