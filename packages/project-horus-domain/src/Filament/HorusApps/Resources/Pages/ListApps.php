@@ -11,6 +11,7 @@ use Wzrd\HorusDomain\Filament\HorusApps\Resources\HorusAppsResource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
 use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
+use Wzrd\HorusDomain\Filament\HorusInteraction\Widgets\PlatformChart;
 
 class ListApps extends ListRecords
 {
@@ -26,6 +27,7 @@ class ListApps extends ListRecords
     {
         return [
             ListAppsWidgets::class,
+            PlatformChart::class,
         ];
     }
 

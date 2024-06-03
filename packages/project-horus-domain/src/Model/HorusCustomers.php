@@ -2,12 +2,9 @@
 
 namespace Wzrd\HorusDomain\Model;
 
-use Filament\Panel;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Collection;
 
 class HorusCustomers extends Authenticatable
 {

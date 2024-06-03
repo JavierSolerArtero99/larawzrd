@@ -27,7 +27,7 @@ class HorusPlugin implements Plugin
             HorusAppsResource::class,
         ])
         ->widgets([
-            //PlatformChart::class
+            PlatformChart::class
         ]);
     }
 

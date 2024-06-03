@@ -5,6 +5,7 @@ namespace Wzrd\HorusDomain\Filament\HorusApps\Resources;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages\CreateApp;
 use Wzrd\HorusDomain\Filament\HorusApps\Resources\Pages\ListApps;
 use Wzrd\HorusDomain\Filament\HorusApps\Widgets\ListAppsWidgets;
+use Wzrd\HorusDomain\Filament\HorusInteraction\Widgets\PlatformChart;
 use Wzrd\HorusDomain\Model\HorusApps;
 use Filament\Resources\Resource;
 
@@ -28,6 +29,7 @@ class HorusAppsResource extends Resource
     {
         return [
             ListAppsWidgets::class,
+            PlatformChart::class
         ];
     }
 }

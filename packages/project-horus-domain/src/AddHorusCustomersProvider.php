@@ -4,9 +4,7 @@ namespace Wzrd\HorusDomain;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
-use Wzrd\HorusDomain\Model\HorusApps;
 use Wzrd\HorusDomain\Model\HorusCustomers;
-use Wzrd\HorusDomain\Observers\AppsObserver;
 
 class AddHorusCustomersProvider extends ServiceProvider
 {
