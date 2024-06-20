@@ -3,6 +3,7 @@
 namespace Wzrd\CalandraTexDomain\Filament\CtOrder\Resources;
 
 use Filament\Resources\Resource;
+use Wzrd\CalandraTexDomain\Filament\CtOrder\Pages\CtOrderForm;
 use Wzrd\CalandraTexDomain\Filament\CtOrder\Pages\CtOrderIndex;
 use Wzrd\CalandraTexDomain\Filament\CtOrder\Widgets\CtData;
 use Wzrd\CalandraTexDomain\Filament\CtOrder\Widgets\CtOrderHistory;
@@ -30,6 +31,7 @@ class CtOrderResource extends Resource
     {
         return [
             'index' => CtOrderIndex::route('/'),
+            'create' => CtOrderForm::route('/create'),
         ];
     }
 }
