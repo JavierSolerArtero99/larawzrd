@@ -6,13 +6,13 @@ use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Collection;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Wzrd\Cms\Filament\Resources\CmsResource\Columns\ContentStatus;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 
@@ -34,8 +34,15 @@ class ContentList extends ListRecords
     {
         return $table
             ->columns([
-                ContentStatus::make('status')
-                    ->label(""),
+                IconColumn::make('status')
+                    ->label("")
+                    ->icon(fn (string $state): string => match ($state) {
+                        ContentStatusInterface::DRAFT => 'heroicon-o-x-circle',
+                        ContentStatusInterface::PUBLISHED => 'heroicon-o-check-circle',
+                    })->color(fn (string $state): string => match ($state) {
+                        ContentStatusInterface::DRAFT => 'warning',
+                        ContentStatusInterface::PUBLISHED => 'success',
+                    }),
                 TextColumn::make('page_title')->searchable(),
                 TextColumn::make('slug')->searchable(),
             ])
