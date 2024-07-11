@@ -20,9 +20,13 @@ class ViewProcessorController extends Controller
     {
         $content = $this->cmsService->getContentBySlug($slug ?? "/");
 
-        echo var_dump($content);
-        die;
+        return view('WzrdCmsBridge::home-test')
+            ->with('layout', 'default')
+            ->with('title', 'Home - Calandratex');
 
-        return $this->viewBuilder->build($content);
+        // echo var_dump($content);
+        // die;
+
+        // return $this->viewBuilder->build($content);
     }
 }
