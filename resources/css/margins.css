@@ -1,0 +1,7 @@
+/* LAYOUT */
+.boxed {
+    margin-inline: 7%;
+}
+.full {
+    @apply w-full;
+}

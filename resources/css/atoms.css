@@ -1,15 +1,13 @@
+/* COLORS */
 .bg-primary {
-    background-color: #171717;
+    @apply bg-[#171717];
 }
-
 .bg-secondary {
-    background-color: #5800FF;
+    @apply bg-[#5800FF];
 }
-
 .bg-third {
-    background-color: #E900FF;
+    @apply bg-[#E900FF];
 }
-
 .bg-forth {
-    background-color: #FFC600;
+    @apply bg-[#FFC600];
 }
