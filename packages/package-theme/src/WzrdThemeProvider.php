@@ -17,6 +17,7 @@ class WzrdThemeProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
+            ->hasRoute('ThemeRoutes')
             ->hasViews("WzrdTheme");
     }
 
