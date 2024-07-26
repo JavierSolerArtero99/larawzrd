@@ -2,12 +2,95 @@
 .bg-primary {
     @apply bg-[#171717];
 }
+
 .bg-secondary {
     @apply bg-[#5800FF];
 }
+
 .bg-third {
     @apply bg-[#E900FF];
 }
+
 .bg-forth {
     @apply bg-[#FFC600];
+}
+
+.bg-success {
+    @apply bg-green-400;
+}
+
+.bg-warning {
+    @apply bg-yellow-400;
+}
+
+.bg-error {
+    @apply bg-red-400;
+}
+
+/* BUTONS */
+.btn {
+    @apply p-2.5;
+    @apply w-auto;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply text-center;
+    @apply rounded-md;
+    @apply bg-primary;
+    @apply text-white;
+    @apply transition-all;
+    @apply cursor-pointer;
+    @apply text-base;
+    @apply align-middle;
+}
+
+.btn-primary:hover {
+    @apply bg-secondary;
+}
+
+.btn-secondary {
+    @apply bg-secondary;
+}
+
+.btn-secondary:hover {
+    @apply bg-primary;
+}
+
+.btn-light-fill {
+    @apply border;
+    @apply bg-white;
+    @apply border-[#171717];
+    @apply text-[#171717];
+}
+
+.btn-dark-fill {
+    @apply bg-black;
+}
+
+.btn-dark-fill:hover {
+    @apply bg-gray-800;
+}
+
+.btn-success {
+    @apply bg-success;
+    @apply text-white;
+}
+.btn-success:hover {
+    @apply opacity-80;
+}
+
+.btn-warning {
+    @apply bg-warning;
+    @apply text-white;
+}
+.btn-warning:hover {
+    @apply opacity-80;
+}
+
+.btn-error {
+    @apply bg-error;
+    @apply text-white;
+}
+.btn-error:hover {
+    @apply opacity-80;
 }

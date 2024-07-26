@@ -11,7 +11,7 @@
 
     @livewireStyles
 
-    @vite('resources/css/app.css')
+    @vite('resources/css/composing.css')
     @vite('resources/css/atoms.css')
     @vite('resources/css/fonts.css')
     @vite('resources/css/margins.css')
