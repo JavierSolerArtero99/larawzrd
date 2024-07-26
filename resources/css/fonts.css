@@ -11,8 +11,3 @@
 .font-secondary {
     font-family: "Kode Mono", monospace;
 }
-
-/* APPLIES */
-* {
-    @apply font-primary;
-}
