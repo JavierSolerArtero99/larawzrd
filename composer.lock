@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a22ab07635201afec7aa141d8930391a",
+    "content-hash": "62ced6a29b85999eaaf18cca71c84e97",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7950,6 +7950,45 @@
             "autoload": {
                 "psr-4": {
                     "Wzrd\\Customer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/package-page-builder",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/content/package-page-builder",
+                "reference": "983274235e35651133c82b88493adb9ff1784628"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\PageBuilder\\": "src/"
                 }
             },
             "license": [
