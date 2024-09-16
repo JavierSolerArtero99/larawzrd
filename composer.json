@@ -19,7 +19,6 @@
         "wzrd/package-cms": "dev-main",
         "wzrd/package-cms-bridge": "dev-main",
         "wzrd/package-customers": "dev-main",
-        "wzrd/package-page-builder": "dev-main",
         "wzrd/package-theme": "dev-main",
         "wzrd/project-calandratex-domain": "dev-main",
         "wzrd/project-horus-domain": "dev-main"
