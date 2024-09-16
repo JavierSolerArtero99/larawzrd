@@ -61,7 +61,7 @@ class ContentEdit extends EditRecord
     private function getAllComponents()
     {
         return array_map(
-            fn($componentClass) => App::make($componentClass)->adminEdit(),
+            fn($componentClass) => App::make($componentClass)->editFields(),
             Config::get(ConfigInterface::WZRD_COMPONENTS)
         );
     }

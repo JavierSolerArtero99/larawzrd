@@ -12,6 +12,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
+use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 use Wzrd\Cms\Model\Theme\LayoutInterface;
@@ -60,7 +61,7 @@ class ContentCreate extends CreateRecord
     private function getAllComponents()
     {
         return array_map(
-            fn($componentClass) => App::make($componentClass)->adminEdit(),
+            fn($componentClass) => App::make($componentClass)->createFields(),
             Config::get(ConfigInterface::WZRD_COMPONENTS)
         );
     }

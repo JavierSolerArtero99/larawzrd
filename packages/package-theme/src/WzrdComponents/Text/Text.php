@@ -6,12 +6,12 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
-use Wzrd\CmsBridge\WzrdComponents\Api\ComponentInterface;
+use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
 
-class Text extends ComponentInterface implements TextInterface
+class Text implements WithAdminFieldsInterface, TextInterface
 {
 
-    public function adminEdit()
+    public function createFields(): Block
     {
         return Block::make(TextInterface::COMPONENT_NAME)
             ->icon(self::COMPONENT_ICON)
@@ -23,5 +23,10 @@ class Text extends ComponentInterface implements TextInterface
                     ->native(false),
                 TagsInput::make(self::CSS_CLASSES)
             ]);
+    }
+
+    public function editFields(): Block
+    {
+        return $this->createFields();
     }
 }

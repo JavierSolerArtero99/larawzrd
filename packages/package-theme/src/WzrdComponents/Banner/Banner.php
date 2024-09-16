@@ -7,11 +7,12 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Wzrd\CmsBridge\WzrdComponents\Api\ComponentInterface;
+use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
 
-class Banner extends ComponentInterface implements BannerInterface
+class Banner implements WithAdminFieldsInterface, BannerInterface
 {
-    public function adminEdit()
+
+    public function createFields(): Block
     {
         return Block::make(BannerInterface::COMPONENT_NAME)
             ->icon(self::COMPONENT_ICON)
@@ -32,5 +33,10 @@ class Banner extends ComponentInterface implements BannerInterface
                     ->searchable()
                     ->native(false),
             ]);
+    }
+
+    public function editFields(): Block
+    {
+        return $this->createFields();
     }
 }
