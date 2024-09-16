@@ -20,9 +20,6 @@ class ViewProcessorController extends Controller
     {
         $content = $this->cmsService->getContentBySlug($slug ?? "/");
 
-        echo(json_encode($content));
-        die;
-
         return $this->viewBuilder->build($content);
     }
 }
