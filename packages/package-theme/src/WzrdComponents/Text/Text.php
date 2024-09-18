@@ -7,8 +7,9 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
+use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
-class Text implements WithAdminFieldsInterface, TextInterface
+class Text implements WithAdminFieldsInterface, TextInterface, WithTemplateInterface
 {
 
     public function createFields(): Block
@@ -21,12 +22,17 @@ class Text implements WithAdminFieldsInterface, TextInterface
                     ->options(self::HTML_TAG_OPTIONS)
                     ->searchable()
                     ->native(false),
-                TagsInput::make(self::CSS_CLASSES)
+                TagsInput::make(self::CSS_CLASSES),
             ]);
     }
 
     public function editFields(): Block
     {
         return $this->createFields();
+    }
+
+    public function render()
+    {
+        return view(TextInterface::COMPONENT_TEMPLATE);
     }
 }

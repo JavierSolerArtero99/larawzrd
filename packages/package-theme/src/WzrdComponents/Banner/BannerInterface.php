@@ -5,6 +5,7 @@ namespace Wzrd\Theme\WzrdComponents\Banner;
 interface BannerInterface
 {
     const COMPONENT_NAME = "Banner";
+    const COMPONENT_TEMPLATE = "";
     const COMPONENT_ICON = "heroicon-o-document-text";
     const TITLE = "title";
     const SUBTITLE = "subtitle";

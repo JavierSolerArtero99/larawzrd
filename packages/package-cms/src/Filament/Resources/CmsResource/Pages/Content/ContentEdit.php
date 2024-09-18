@@ -16,6 +16,7 @@ use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 use Wzrd\Cms\Model\Theme\LayoutInterface;
 use Wzrd\CmsBridge\Config\ConfigInterface;
+use Wzrd\Theme\WzrdComponents\Text\TextInterface;
 
 class ContentEdit extends EditRecord
 {
@@ -61,7 +62,7 @@ class ContentEdit extends EditRecord
     private function getAllComponents()
     {
         return array_map(
-            fn($componentClass) => App::make($componentClass)->editFields(),
+            fn($component) => App::make($component['class'])->editFields(),
             Config::get(ConfigInterface::WZRD_COMPONENTS)
         );
     }

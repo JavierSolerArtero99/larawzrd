@@ -23,6 +23,6 @@ class CmsService implements CmsServiceInterface
 
     public function getContentBySlug(string $slug): ?Content
     {
-        return Content::where('slug', "/")->first();
+        return Content::where('slug', $slug)->first();
     }
 }
