@@ -61,7 +61,7 @@ class ContentCreate extends CreateRecord
     private function getAllComponents()
     {
         return array_map(
-            fn($componentClass) => App::make($componentClass)->createFields(),
+            fn($component) => App::make($component['class'])->createFields(),
             Config::get(ConfigInterface::WZRD_COMPONENTS)
         );
     }

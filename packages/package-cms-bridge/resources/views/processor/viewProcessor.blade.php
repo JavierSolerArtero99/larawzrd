@@ -5,7 +5,7 @@
 
 @section('content')
     @foreach ($slots as $slot)
-        <!---->
+        {{ $slot->render() }}
     @endforeach
 @endsection
 

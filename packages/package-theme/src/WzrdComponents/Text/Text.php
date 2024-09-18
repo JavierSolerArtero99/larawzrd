@@ -11,6 +11,7 @@ use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
 class Text implements WithAdminFieldsInterface, TextInterface, WithTemplateInterface
 {
+    private $data;
 
     public function createFields(): Block
     {

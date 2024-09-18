@@ -2,6 +2,7 @@
 
 namespace Wzrd\CmsBridge\ViewProcessing;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\View\View;
 use Wzrd\Cms\Model\Content;
@@ -12,12 +13,17 @@ class ViewBuilder implements ViewBuilderInterface
 {
     public function build(?Content $content): View
     {
-        Config::get(ConfigInterface::WZRD_COMPONENTS);
+        $slots = [];
+
+        foreach ($content->body as $slot) {
+            $slotClass = Config::get(ConfigInterface::WZRD_COMPONENTS . '.' . $slot['type'] . '.class');
+            $slots[] = App::make($slotClass, ['data', $content]);
+        }
 
         // TODO: crear façades para los layouts ya que se están dando de alta los que no tocan y renderizar los hijos cada una a la suya
         return view('WzrdCmsBridge::processor.viewProcessor')
             ->with('layout', $content->layout)
             ->with('title', $content->pageTitle)
-            ->with('slots', $content->body);
+            ->with('slots', $slots);
     }
 }
