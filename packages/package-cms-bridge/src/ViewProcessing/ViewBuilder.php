@@ -17,7 +17,7 @@ class ViewBuilder implements ViewBuilderInterface
 
         foreach ($content->body as $slot) {
             $slotClass = Config::get(ConfigInterface::WZRD_COMPONENTS . '.' . $slot['type'] . '.class');
-            $slots[] = App::make($slotClass, ['data', $content]);
+            $slots[] = App::make($slotClass, ['data' => $content->body]);
         }
 
         // TODO: crear façades para los layouts ya que se están dando de alta los que no tocan y renderizar los hijos cada una a la suya

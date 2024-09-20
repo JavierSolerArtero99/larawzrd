@@ -1,1 +1,1 @@
-<h1>holaaa</h1>
+<h1>{{ var_dump($data) }}</h1>

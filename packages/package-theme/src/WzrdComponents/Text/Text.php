@@ -9,9 +9,10 @@ use Filament\Forms\Components\Textarea;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
-class Text implements WithAdminFieldsInterface, TextInterface, WithTemplateInterface
+class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInterface
 {
-    private $data;
+    public function __construct(public array $data)
+    {}
 
     public function createFields(): Block
     {
@@ -34,6 +35,7 @@ class Text implements WithAdminFieldsInterface, TextInterface, WithTemplateInter
 
     public function render()
     {
-        return view(TextInterface::COMPONENT_TEMPLATE);
+        return view(TextInterface::COMPONENT_TEMPLATE)
+            ->with('data', $this->data);
     }
 }
