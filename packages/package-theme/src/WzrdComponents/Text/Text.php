@@ -6,6 +6,7 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
+use Illuminate\View\View;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
@@ -40,7 +41,7 @@ class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInter
         return $this->createFields();
     }
 
-    public function render()
+    public function render(): View
     {
         return view(TextInterface::COMPONENT_TEMPLATE)
             ->with(TextInterface::HTML_TAG, $this->data[TextInterface::HTML_TAG])

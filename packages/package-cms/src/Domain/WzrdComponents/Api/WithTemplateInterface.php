@@ -2,7 +2,9 @@
 
 namespace Wzrd\Cms\Domain\WzrdComponents\Api;
 
+use Illuminate\View\View;
+
 interface WithTemplateInterface
 {
-    public function render();
+    public function render(): View;
 }
