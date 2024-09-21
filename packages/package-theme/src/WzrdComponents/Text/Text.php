@@ -11,8 +11,14 @@ use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
 class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInterface
 {
-    public function __construct(public array $data)
-    {}
+    public array $data;
+
+    public function setData(array $data): Text
+    {
+        $this->data = $data;
+
+        return $this;
+    }
 
     public function createFields(): Block
     {
@@ -23,6 +29,7 @@ class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInter
                 Select::make(self::HTML_TAG)
                     ->options(self::HTML_TAG_OPTIONS)
                     ->searchable()
+                    ->required()
                     ->native(false),
                 TagsInput::make(self::CSS_CLASSES),
             ]);
@@ -36,6 +43,8 @@ class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInter
     public function render()
     {
         return view(TextInterface::COMPONENT_TEMPLATE)
-            ->with('data', $this->data);
+            ->with(TextInterface::HTML_TAG, $this->data[TextInterface::HTML_TAG])
+            ->with(TextInterface::COMPONENT_VALUE, $this->data[TextInterface::COMPONENT_VALUE])
+            ->with(TextInterface::CSS_CLASSES, $this->data[TextInterface::CSS_CLASSES]);
     }
 }
