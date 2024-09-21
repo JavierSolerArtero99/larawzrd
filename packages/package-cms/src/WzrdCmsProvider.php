@@ -2,9 +2,11 @@
 
 namespace Wzrd\Cms;
 
+use Illuminate\Foundation\AliasLoader;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Theme\Facades\ComponentConfig;
 
 class WzrdCmsProvider extends PackageServiceProvider
 {
@@ -22,6 +24,15 @@ class WzrdCmsProvider extends PackageServiceProvider
             ->hasConfigFile(['cms-config'])
             ->hasMigrations($this->getMigrations())
             ->hasViews("WzrdCms");
+    }
+
+    public function registeringPackage(): void
+    {
+        $this->app->singleton('component-config', function ($app) {
+            return new ComponentConfig();
+        });
+
+        AliasLoader::getInstance()->alias('ComponentConfig', ComponentConfig::class);
     }
 
     protected function getMigrations(): array

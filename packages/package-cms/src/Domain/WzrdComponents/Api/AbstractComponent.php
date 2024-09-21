@@ -3,7 +3,6 @@
 namespace Wzrd\Cms\Domain\WzrdComponents\Api;
 
 use Illuminate\View\View;
-use Wzrd\Theme\WzrdComponents\Text\Text;
 
 abstract class AbstractComponent
 {

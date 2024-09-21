@@ -4,8 +4,11 @@ namespace Wzrd\Theme\WzrdComponents\Text;
 
 interface TextInterface
 {
+    /** Metadata **/
     const COMPONENT_NAME = "Text";
     const COMPONENT_TEMPLATE = "WzrdTheme::components.text";
+
+    /** Fields **/
     const COMPONENT_ICON = "heroicon-o-document-text";
     const COMPONENT_VALUE = "value";
     const HTML_TAG = "html_tag";

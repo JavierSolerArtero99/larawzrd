@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wzrd\CmsBridge\Config\ConfigInterface;
+use Wzrd\Theme\Facades\ComponentConfigFacade;
 use Wzrd\Theme\WzrdComponents\Banner\Banner;
 use Wzrd\Theme\WzrdComponents\Banner\BannerInterface;
 use Wzrd\Theme\WzrdComponents\Text\Text;
@@ -25,6 +26,9 @@ class WzrdThemeProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
+        /** Bindings **/
+        $this->app->bind(TextInterface::class, Text::class);
+
         /* Bloques laterales del header, cambiar por clases*/
         Config::push(ConfigInterface::HEADER_SIDEBAR_BLOCKS, [
             'login' => 'Login',
@@ -33,14 +37,17 @@ class WzrdThemeProvider extends PackageServiceProvider
         ]);
 
         /* WZRD Components */
-        Config::set(ConfigInterface::WZRD_COMPONENTS . '.' . TextInterface::COMPONENT_NAME, [
-            'class' => Text::class,
-            'template' => TextInterface::COMPONENT_TEMPLATE
-        ]);
+        ComponentConfigFacade::addNewComponent(
+            TextInterface::COMPONENT_NAME,
+            TextInterface::class,
+            TextInterface::COMPONENT_TEMPLATE
+        );
+        /**
         Config::set(ConfigInterface::WZRD_COMPONENTS . '.' . BannerInterface::COMPONENT_NAME, [
             'class' => Banner::class,
             'template' => BannerInterface::COMPONENT_TEMPLATE
         ]);
+        */
     }
 
     protected function getMigrations(): array
