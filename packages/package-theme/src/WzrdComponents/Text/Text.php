@@ -7,19 +7,13 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Illuminate\View\View;
+use Wzrd\Cms\Domain\WzrdComponents\Api\AbstractComponent;
 use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
-use Wzrd\Cms\Domain\WzrdComponents\Api\WithTemplateInterface;
 
-class Text implements TextInterface, WithAdminFieldsInterface, WithTemplateInterface
+class Text extends AbstractComponent implements
+    TextInterface,
+    WithAdminFieldsInterface
 {
-    public array $data;
-
-    public function setData(array $data): Text
-    {
-        $this->data = $data;
-
-        return $this;
-    }
 
     public function createFields(): Block
     {
