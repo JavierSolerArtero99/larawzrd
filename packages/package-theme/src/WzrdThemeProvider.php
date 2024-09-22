@@ -5,10 +5,8 @@ namespace Wzrd\Theme;
 use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wzrd\Cms\Facades\ComponentConfigFacade;
 use Wzrd\CmsBridge\Config\ConfigInterface;
-use Wzrd\Theme\Facades\ComponentConfigFacade;
-use Wzrd\Theme\WzrdComponents\Banner\Banner;
-use Wzrd\Theme\WzrdComponents\Banner\BannerInterface;
 use Wzrd\Theme\WzrdComponents\Text\Text;
 use Wzrd\Theme\WzrdComponents\Text\TextInterface;
 

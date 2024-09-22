@@ -1,6 +1,6 @@
 <?php
 
-namespace Wzrd\Theme\Facades;
+namespace Wzrd\Cms\Facades;
 
 use Illuminate\Support\Facades\Config;
 

@@ -6,7 +6,7 @@ use Illuminate\Foundation\AliasLoader;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wzrd\Theme\Facades\ComponentConfig;
+use Wzrd\Cms\Facades\ComponentConfig;
 
 class WzrdCmsProvider extends PackageServiceProvider
 {
