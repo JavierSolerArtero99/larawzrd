@@ -3,10 +3,9 @@
 namespace Wzrd\CmsBridge\ViewProcessing;
 
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 use Illuminate\View\View;
+use Wzrd\Cms\Facades\ComponentConfigFacade;
 use Wzrd\Cms\Model\Content;
-use Wzrd\CmsBridge\Config\ConfigInterface;
 use Wzrd\CmsBridge\ViewProcessing\Api\ViewBuilderInterface;
 
 class ViewBuilder implements ViewBuilderInterface
@@ -16,7 +15,7 @@ class ViewBuilder implements ViewBuilderInterface
         $slots = [];
 
         foreach ($content->body as $slot) {
-            $slotClass = Config::get(ConfigInterface::WZRD_COMPONENTS . '.' . $slot['type'] . '.class');
+            $slotClass = ComponentConfigFacade::getClassForComponent($slot['type']);
             $slots[] = App::make($slotClass)->setData($slot['data']);
         }
 

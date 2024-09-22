@@ -2,11 +2,9 @@
 
 namespace Wzrd\Theme;
 
-use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wzrd\Cms\Facades\ComponentConfigFacade;
-use Wzrd\CmsBridge\Config\ConfigInterface;
 use Wzrd\Theme\WzrdComponents\Text\Text;
 use Wzrd\Theme\WzrdComponents\Text\TextInterface;
 
@@ -26,13 +24,6 @@ class WzrdThemeProvider extends PackageServiceProvider
     {
         /** Bindings **/
         $this->app->bind(TextInterface::class, Text::class);
-
-        /* Bloques laterales del header, cambiar por clases*/
-        Config::push(ConfigInterface::HEADER_SIDEBAR_BLOCKS, [
-            'login' => 'Login',
-            'reviewing' => 'Compareee',
-            'published' => 'Published',
-        ]);
 
         /* WZRD Components */
         ComponentConfigFacade::addNewComponent(

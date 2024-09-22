@@ -61,7 +61,7 @@ class ThemeEdit extends EditRecord
                                 ]),
                         ]),
                 ]),
-            Section::make('Lateral Blocks')
+            /**Section::make('Lateral Blocks')
                 ->hidden(fn(Get $get): bool => $get('slug') != 'header')
                 ->statePath('sidebar')
                 ->schema([
@@ -69,7 +69,7 @@ class ThemeEdit extends EditRecord
                         ->searchable()
                         ->multiple()
                         ->options(Config::get("header_sidebar_blocks"))
-                ]),
+                ]),*/
         ]);
     }
 

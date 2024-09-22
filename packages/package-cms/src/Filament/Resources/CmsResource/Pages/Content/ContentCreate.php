@@ -11,12 +11,10 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
-use Wzrd\Cms\Domain\WzrdComponents\Api\WithAdminFieldsInterface;
+use Wzrd\Cms\Facades\ComponentConfigFacade;
 use Wzrd\Cms\Filament\Resources\CmsResource\ContentResource;
 use Wzrd\Cms\Model\Theme\ContentStatusInterface;
 use Wzrd\Cms\Model\Theme\LayoutInterface;
-use Wzrd\CmsBridge\Config\ConfigInterface;
 
 class ContentCreate extends CreateRecord
 {
@@ -62,7 +60,7 @@ class ContentCreate extends CreateRecord
     {
         return array_map(
             fn($component) => App::make($component['class'])->createFields(),
-            Config::get(ConfigInterface::WZRD_COMPONENTS)
+            ComponentConfigFacade::getComponents()
         );
     }
 }
