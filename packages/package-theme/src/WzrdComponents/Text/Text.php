@@ -14,7 +14,6 @@ class Text extends AbstractComponent implements
     TextInterface,
     WithAdminFieldsInterface
 {
-
     public function createFields(): Block
     {
         return Block::make(TextInterface::COMPONENT_NAME)

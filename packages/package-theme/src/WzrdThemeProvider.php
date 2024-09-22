@@ -5,6 +5,8 @@ namespace Wzrd\Theme;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wzrd\Cms\Facades\ComponentConfigFacade;
+use Wzrd\Theme\WzrdComponents\Container\Container;
+use Wzrd\Theme\WzrdComponents\Container\ContainerInterface;
 use Wzrd\Theme\WzrdComponents\Text\Text;
 use Wzrd\Theme\WzrdComponents\Text\TextInterface;
 
@@ -24,12 +26,18 @@ class WzrdThemeProvider extends PackageServiceProvider
     {
         /** Bindings **/
         $this->app->bind(TextInterface::class, Text::class);
+        $this->app->bind(ContainerInterface::class, Container::class);
 
         /* WZRD Components */
         ComponentConfigFacade::addNewComponent(
             TextInterface::COMPONENT_NAME,
             TextInterface::class,
             TextInterface::COMPONENT_TEMPLATE
+        );
+        ComponentConfigFacade::addNewComponent(
+            ContainerInterface::COMPONENT_NAME,
+            ContainerInterface::class,
+            ContainerInterface::COMPONENT_TEMPLATE
         );
         /**
         Config::set(ConfigInterface::WZRD_COMPONENTS . '.' . BannerInterface::COMPONENT_NAME, [
