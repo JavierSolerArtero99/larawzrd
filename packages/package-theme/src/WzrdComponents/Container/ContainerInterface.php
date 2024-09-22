@@ -10,5 +10,6 @@ interface ContainerInterface
 
     /** Fields **/
     const ICON = "heroicon-o-cube-transparent";
+    const CSS_CLASSES = "css_classes";
 
 }

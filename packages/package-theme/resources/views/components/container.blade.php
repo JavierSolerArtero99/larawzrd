@@ -1,1 +1,3 @@
-<h1>Este es un container</h1>
+<div @if($css_classes) class="{{ implode(' ', $css_classes) }}" @endif>
+    Contenido del container
+</div>
