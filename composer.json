@@ -1,6 +1,7 @@
 {
     "name": "larawzrd/monorepo",
     "type": "library",
+    "version": "1",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
         "laravel",
