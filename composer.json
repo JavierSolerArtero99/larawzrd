@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
+    "name": "larawzrd/monorepo",
+    "type": "library",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
         "laravel",
@@ -34,9 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "LaraWzrd\\Monorepo\\": "./"
         }
     },
     "autoload-dev": {
