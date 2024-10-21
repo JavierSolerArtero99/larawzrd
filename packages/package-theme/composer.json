@@ -2,6 +2,7 @@
     "name": "wzrd/package-theme",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "Wzrd\\Theme\\": "src/"
