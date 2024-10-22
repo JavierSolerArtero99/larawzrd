@@ -61,7 +61,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                FilamentLoginLogs::make(),
+                //FilamentLoginLogs::make(),
                 CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
                 CtCustomerPlugin::make(),

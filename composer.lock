@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f64ddb68ea7b887233a2e03598a0dcb9",
+    "content-hash": "43ff7bde67627eb90cad2ed0756095fd",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -350,48 +350,6 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
-        },
-        {
-            "name": "cursosdesarrolloweb/filament-login-logs-plugin",
-            "version": "1.0.1",
-            "dist": {
-                "type": "path",
-                "url": "packages/filament-login-logs",
-                "reference": "d2f07c6465eaaf80d6bb9e7e814f8626bbf76f5e"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "log1x/blade-filetype-icons": "^1.0",
-                "spatie/laravel-package-tools": "^1.16"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Cursosdesarrolloweb\\FilamentLoginLogs\\FilamentLoginLogsServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Cursosdesarrolloweb\\FilamentLoginLogs\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "cursosdesarrolloweb",
-                    "email": "app@cursosdesarrolloweb.es"
-                }
-            ],
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "danharrin/date-format-converter",

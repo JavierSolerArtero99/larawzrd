@@ -15,7 +15,6 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
-        "cursosdesarrolloweb/filament-login-logs-plugin": "self.version",
         "wzrd/package-cms": "self.version",
         "wzrd/package-cms-bridge": "self.version",
         "wzrd/package-customers": "self.version",
