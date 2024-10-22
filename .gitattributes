@@ -9,6 +9,6 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
-* export-ignore
+./* export-ignore
 packages export-subst
 packages/** export-subst
