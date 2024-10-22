@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43ff7bde67627eb90cad2ed0756095fd",
+    "content-hash": "a3081e1743b400b6c361e71ed210747c",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7699,11 +7699,11 @@
         },
         {
             "name": "wzrd/package-cms",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/package-cms",
-                "reference": "80bdfa8d61ad8b1e84913e0f8edef60c3e211bec"
+                "reference": "321f8f046ed40001aa030d1eb0d4949159a7a7f2"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7741,11 +7741,11 @@
         },
         {
             "name": "wzrd/package-cms-bridge",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/package-cms-bridge",
-                "reference": "0910861d70077b07b3fbdb13504f63d21641eee3"
+                "reference": "dfdbc1ea642409a1ff7ab4d906ed653f2cd1860a"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7782,11 +7782,11 @@
         },
         {
             "name": "wzrd/package-customers",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/package-customers",
-                "reference": "aeab65f8389c3b4726469c4c0739539574f45bc8"
+                "reference": "cd842599e6de06145492e04b7d4fda3793c13743"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7824,11 +7824,11 @@
         },
         {
             "name": "wzrd/package-theme",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/package-theme",
-                "reference": "d5f5304ddc363b005537a6afa0f50308e7d64376"
+                "reference": "92ab5590377347ae7022e7ab19a44020c067553e"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7865,11 +7865,11 @@
         },
         {
             "name": "wzrd/project-calandratex-domain",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/project-calandratex-domain",
-                "reference": "49e25909c27f9b3de4c579e60527f55d7612a80f"
+                "reference": "b8852bf82b746d37ab638e32c37e1716b1f83797"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7906,11 +7906,11 @@
         },
         {
             "name": "wzrd/project-horus-domain",
-            "version": "1.0.1",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/project-horus-domain",
-                "reference": "40b28cb497b5334bde3e106fcc4fe01c87f0e7ad"
+                "reference": "d9ecc36f0bdea74cbd78d01861b0df55449e397b"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -10461,7 +10461,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "wzrd/package-cms": 20,
+        "wzrd/package-cms-bridge": 20,
+        "wzrd/package-customers": 20,
+        "wzrd/package-theme": 20,
+        "wzrd/project-calandratex-domain": 20,
+        "wzrd/project-horus-domain": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

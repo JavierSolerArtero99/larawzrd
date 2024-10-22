@@ -2,7 +2,6 @@
     "name": "wzrd/package-customers",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "Wzrd\\Customer\\": "src/"
