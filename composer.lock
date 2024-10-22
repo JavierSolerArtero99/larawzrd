@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bd38fd0c1756697f9190b1c1a36d815",
+    "content-hash": "fd98490dc5bc6ca1ed51ac901e11da47",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7702,8 +7702,8 @@
             "version": "1.0.1",
             "dist": {
                 "type": "path",
-                "url": "packages/package-cms",
-                "reference": "6403b6ecb13ae87c62f74857d413293c3486f0e8"
+                "url": "./packages/package-cms",
+                "reference": "80bdfa8d61ad8b1e84913e0f8edef60c3e211bec"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7736,219 +7736,6 @@
                 }
             ],
             "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "wzrd/package-cms-bridge",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/package-cms-bridge",
-                "reference": "08cc98f527f6adcde6c89574d20b23e5289b1afd"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\CmsBridge\\WzrdCmsBridgeProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\CmsBridge\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "wzrd/package-customers",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/package-customers",
-                "reference": "69df209d9dad0fb7921f1a46715aa70844ce3ce7"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2",
-                "log1x/blade-filetype-icons": "^1.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\Customer\\CustomerProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\Customer\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "wzrd/package-theme",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/package-theme",
-                "reference": "eecb221a9c08482c69be85a1780a760dabb9ee45"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\Theme\\WzrdThemeProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\Theme\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "wzrd/project-calandratex-domain",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/project-calandratex-domain",
-                "reference": "f64b23b7281dbd195599fe6c57baf31e8c842497"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\CalandraTexDomain\\CalandraTexDomainProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\CalandraTexDomain\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "wzrd/project-horus-domain",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "packages/project-horus-domain",
-                "reference": "063fec611985846db7c2baaa522d227caa8360f7"
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "livewire/livewire": "^3.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Wzrd\\HorusDomain\\HorusDomainProvider",
-                        "Wzrd\\HorusDomain\\HorusPanelProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wzrd\\HorusDomain\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Javier Soler Artero",
-                    "email": "javier.soler.jsa@gmail.com"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
                 "relative": true
             }
         }
@@ -10467,13 +10254,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wzrd/package-cms-bridge": 20,
-        "wzrd/package-customers": 20,
-        "wzrd/package-theme": 20,
-        "wzrd/project-calandratex-domain": 20,
-        "wzrd/project-horus-domain": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

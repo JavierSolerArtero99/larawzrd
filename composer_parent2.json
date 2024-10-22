@@ -15,7 +15,12 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
-        "wzrd/package-cms": "1.0.1"
+        "wzrd/package-cms": "1.0.1",
+        "wzrd/package-cms-bridge": "dev-main",
+        "wzrd/package-customers": "dev-main",
+        "wzrd/package-theme": "dev-main",
+        "wzrd/project-calandratex-domain": "dev-main",
+        "wzrd/project-horus-domain": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -71,10 +76,19 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": {
-        "wzrd/package-cms": {
+    "repositories": [
+        {
             "type": "path",
-            "url": "./packages/package-cms"
+            "url": "packages/*",
+            "options": {
+                "symlink": true
+            }
+        },{
+            "type": "path",
+            "url": "packages/*/*",
+            "options": {
+                "symlink": true
+            }
         }
-    }
+    ]
 }
