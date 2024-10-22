@@ -79,10 +79,16 @@
     "repositories": [
         {
             "type": "path",
-            "url": "packages/*"
+            "url": "packages/*",
+            "options": {
+                "symlink": true
+            }
         },{
             "type": "path",
-            "url": "packages/*/*"
+            "url": "packages/*/*",
+            "options": {
+                "symlink": true
+            }
         }
     ]
 }

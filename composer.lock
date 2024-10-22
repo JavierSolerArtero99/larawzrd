@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3081e1743b400b6c361e71ed210747c",
+    "content-hash": "1bd38fd0c1756697f9190b1c1a36d815",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7699,11 +7699,11 @@
         },
         {
             "name": "wzrd/package-cms",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/package-cms",
-                "reference": "321f8f046ed40001aa030d1eb0d4949159a7a7f2"
+                "reference": "6403b6ecb13ae87c62f74857d413293c3486f0e8"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7736,6 +7736,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
@@ -7745,7 +7746,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/package-cms-bridge",
-                "reference": "dfdbc1ea642409a1ff7ab4d906ed653f2cd1860a"
+                "reference": "08cc98f527f6adcde6c89574d20b23e5289b1afd"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7777,6 +7778,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
@@ -7786,7 +7788,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/package-customers",
-                "reference": "cd842599e6de06145492e04b7d4fda3793c13743"
+                "reference": "69df209d9dad0fb7921f1a46715aa70844ce3ce7"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7819,6 +7821,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
@@ -7828,7 +7831,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/package-theme",
-                "reference": "92ab5590377347ae7022e7ab19a44020c067553e"
+                "reference": "eecb221a9c08482c69be85a1780a760dabb9ee45"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7860,6 +7863,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
@@ -7869,7 +7873,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/project-calandratex-domain",
-                "reference": "b8852bf82b746d37ab638e32c37e1716b1f83797"
+                "reference": "f64b23b7281dbd195599fe6c57baf31e8c842497"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7901,6 +7905,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
@@ -7910,7 +7915,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/project-horus-domain",
-                "reference": "d9ecc36f0bdea74cbd78d01861b0df55449e397b"
+                "reference": "063fec611985846db7c2baaa522d227caa8360f7"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -7943,6 +7948,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         }
@@ -10462,7 +10468,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wzrd/package-cms": 20,
         "wzrd/package-cms-bridge": 20,
         "wzrd/package-customers": 20,
         "wzrd/package-theme": 20,
