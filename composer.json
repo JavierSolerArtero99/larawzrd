@@ -15,7 +15,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
-        "wzrd/package-cms": "dev-main",
+        "wzrd/package-cms": "1.0.1",
         "wzrd/package-cms-bridge": "dev-main",
         "wzrd/package-customers": "dev-main",
         "wzrd/package-theme": "dev-main",
