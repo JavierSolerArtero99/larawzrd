@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe7ff95d470fed80db09fd86550afd93",
+    "content-hash": "1bd38fd0c1756697f9190b1c1a36d815",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -3384,6 +3384,66 @@
                 }
             ],
             "time": "2024-10-15T19:35:06+00:00"
+        },
+        {
+            "name": "log1x/blade-filetype-icons",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/blade-filetype-icons.git",
+                "reference": "1667de6603d2ab394cbdea3c1c3718319c3d60d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/blade-filetype-icons/zipball/1667de6603d2ab394cbdea3c1c3718319c3d60d4",
+                "reference": "1667de6603d2ab394cbdea3c1c3718319c3d60d4",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.1",
+                "illuminate/support": "^9.0|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "dmhendricks/file-icon-vectors": "dev-master",
+                "laravel/pint": "^1.11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Log1x\\BladeFileTypeIcons\\BladeFileTypeIconsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Log1x\\BladeFileTypeIcons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "homepage": "https://github.com/log1x"
+                }
+            ],
+            "description": "A package to easily make use of dmhendricks/file-icon-vectors in your Laravel Blade views.",
+            "homepage": "https://github.com/log1x/blade-filetype-icons",
+            "keywords": [
+                "File Icons",
+                "File Type Icons",
+                "blade",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Log1x/blade-filetype-icons/issues",
+                "source": "https://github.com/Log1x/blade-filetype-icons/tree/v1.0.6"
+            },
+            "time": "2024-03-15T10:36:37+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -7636,6 +7696,261 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wzrd/package-cms",
+            "version": "1.0.1",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-cms",
+                "reference": "6403b6ecb13ae87c62f74857d413293c3486f0e8"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2",
+                "log1x/blade-filetype-icons": "^1.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Cms\\WzrdCmsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Cms\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/package-cms-bridge",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-cms-bridge",
+                "reference": "08cc98f527f6adcde6c89574d20b23e5289b1afd"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\CmsBridge\\WzrdCmsBridgeProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\CmsBridge\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/package-customers",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-customers",
+                "reference": "69df209d9dad0fb7921f1a46715aa70844ce3ce7"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2",
+                "log1x/blade-filetype-icons": "^1.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Customer\\CustomerProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Customer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/package-theme",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/package-theme",
+                "reference": "eecb221a9c08482c69be85a1780a760dabb9ee45"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\Theme\\WzrdThemeProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\Theme\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/project-calandratex-domain",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/project-calandratex-domain",
+                "reference": "f64b23b7281dbd195599fe6c57baf31e8c842497"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\CalandraTexDomain\\CalandraTexDomainProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\CalandraTexDomain\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "wzrd/project-horus-domain",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/project-horus-domain",
+                "reference": "063fec611985846db7c2baaa522d227caa8360f7"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "livewire/livewire": "^3.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wzrd\\HorusDomain\\HorusDomainProvider",
+                        "Wzrd\\HorusDomain\\HorusPanelProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wzrd\\HorusDomain\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Soler Artero",
+                    "email": "javier.soler.jsa@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -10152,7 +10467,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "wzrd/package-cms-bridge": 20,
+        "wzrd/package-customers": 20,
+        "wzrd/package-theme": 20,
+        "wzrd/project-calandratex-domain": 20,
+        "wzrd/project-horus-domain": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
