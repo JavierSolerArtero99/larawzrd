@@ -9,6 +9,15 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
-./* export-ignore
 packages export-subst
 packages/** export-subst
+app export-subst
+bootstrap export-subst
+lang export-subst
+database export-subst
+config export-subst
+public export-subst
+resources export-subst
+routes export-subst
+storage export-subst
+tests export-subst
