@@ -62,7 +62,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 //FilamentLoginLogs::make(),
-                //CustomersPlugin::make(),
+                CustomersPlugin::make(),
                 WzrdCmsPlugin::make(),
                 //CtCustomerPlugin::make(),
             ]);
