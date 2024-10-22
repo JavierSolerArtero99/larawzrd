@@ -35,8 +35,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Wzrd\\Cms\\": "packages/package-cms/src/"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
@@ -89,6 +88,41 @@
             "options": {
                 "symlink": true
             }
+        },{
+            "type": "package",
+            "package": {
+                "name": "wzrd/package-cms",
+                "type": "library",
+                "version": "1.0.1",
+                "license": "MIT",
+                "autoload": {
+                    "psr-4": {
+                        "Wzrd\\Cms\\": "packages/package-cms/src/"
+                    }
+                },
+                "authors": [
+                    {
+                        "name": "Javier Soler Artero",
+                        "email": "javier.soler.jsa@gmail.com"
+                    }
+                ],
+                "require": {
+                    "filament/filament": "^3.0",
+                    "log1x/blade-filetype-icons": "^1.0",
+                    "livewire/livewire": "^3.2"
+                },
+                "require-dev": {
+                    "laravel/pint": "^1.13"
+                },
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Wzrd\\Cms\\WzrdCmsProvider"
+                        ]
+                    }
+                }
+            }
+
         }
     ]
 }
