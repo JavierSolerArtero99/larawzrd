@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "laravel/framework": "^10.10",
         "filament/filament": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/sanctum": "^3.3",
@@ -27,6 +28,10 @@
     },
     "autoload": {
         "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/",
+            "Wzrd\\Cms\\": "packages/package-cms/src/"
         }
     },
     "autoload-dev": {
