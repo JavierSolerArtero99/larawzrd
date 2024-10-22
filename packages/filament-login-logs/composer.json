@@ -2,6 +2,7 @@
     "name": "cursosdesarrolloweb/filament-login-logs-plugin",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "Cursosdesarrolloweb\\FilamentLoginLogs\\": "src/"

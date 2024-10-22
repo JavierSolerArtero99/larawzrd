@@ -15,12 +15,13 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
-        "wzrd/package-cms": "1.0.1",
-        "wzrd/package-cms-bridge": "1.0.1",
-        "wzrd/package-customers": "1.0.1",
-        "wzrd/package-theme": "1.0.1",
-        "wzrd/project-calandratex-domain": "1.0.1",
-        "wzrd/project-horus-domain": "1.0.1"
+        "cursosdesarrolloweb/filament-login-logs-plugin": "self.version",
+        "wzrd/package-cms": "self.version",
+        "wzrd/package-cms-bridge": "self.version",
+        "wzrd/package-customers": "self.version",
+        "wzrd/package-theme": "self.version",
+        "wzrd/project-calandratex-domain": "self.version",
+        "wzrd/project-horus-domain": "self.version"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
